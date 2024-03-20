@@ -1,0 +1,6 @@
+@use '../../styles/variables' as v;
+
+.footer {
+  height: 100px;
+  background-image: url(v.$header-bckg);
+}

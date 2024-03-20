@@ -1,0 +1,19 @@
+@use '../../styles/variables' as v;
+
+.banner-add {
+  height: calc(5 * v.$gap);
+  background-image: url(v.$banner-bckg);
+  background-size: cover;
+}
+
+@media (min-width: 550px) {
+  .banner-add {
+    height: calc(6 * v.$gap);
+  }
+}
+
+@media (min-width: 900px) {
+  .banner-add {
+    height: calc(7 * v.$gap);
+  }
+}

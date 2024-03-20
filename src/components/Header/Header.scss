@@ -1,0 +1,74 @@
+@use '../../styles/variables' as v;
+
+.header {
+  position: relative;
+  background-image: url(v.$header-bckg);
+  background-size: cover;
+  // padding: calc(0.1 * v.$gap);
+  list-style: none;
+
+  .main-header {
+    .header-logo {
+      display: inline;
+      width: 20%;
+    }
+    .main-header_nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+      padding-right: v.$gap;
+      position: absolute;
+      top: 40%;
+      left: 25%;
+
+      .main-header_item {
+        .main-header_link {
+          color: white;
+        }
+
+        .main-header_link--active {
+          color: v.$hashtag-color;
+        }
+
+        .main-header_separation {
+          color: white;
+        }
+      }
+
+      .main-header_div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        right: v.$gap;
+
+        .main-header_item {
+          .main-header_link {
+            color: white;
+          }
+          .main-header_separation {
+            text-align: center;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .secondary-header_nav {
+    display: none;
+
+    // .secondary-header_list {
+    //   .secondary-header_item {
+    //     .secondary-header_link {
+    //     }
+    //   }
+    // }
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    font-size: calc(1.4 * v.$p-font-size);
+  }
+}

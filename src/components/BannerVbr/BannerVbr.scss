@@ -1,0 +1,50 @@
+@use '../../styles/variables' as v;
+
+.banner-vbr {
+  min-height: 170px;
+  background-image: url('src/assets/images/banner.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 447px) {
+  .banner-vbr {
+    min-height: 200px;
+  }
+}
+
+@media (min-width: 525px) {
+  .banner-vbr {
+    min-height: 230px;
+  }
+}
+
+@media (min-width: 600px) {
+  .banner-vbr {
+    min-height: 260px;
+  }
+}
+
+@media (min-width: 680px) {
+  .banner-vbr {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 789px) {
+  .banner-vbr {
+    min-height: 340px;
+  }
+}
+
+@media (min-width: 900px) {
+  .banner-vbr {
+    min-height: 400px;
+  }
+}
+
+@media (min-width: 1060px) {
+  .banner-vbr {
+    min-height: 460px;
+  }
+}

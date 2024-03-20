@@ -2,3 +2,20 @@
 Définition de variables Sass, par exemple :
 $color: #282c34;
 */
+
+// ------------- measurement ----------------
+$gap: 1em;
+$h1-font-size: 1.5em;
+$p-font-size: 1em;
+
+// ------------- colors ---------------------
+$main-bckg: #ededed;
+// $main-bckg: 'src/assets/images/alu-bckg.webp';
+// $header-bckg: black;
+$header-bckg: 'src/assets/images/metal-header.avif';
+$secondary-bckg: #bebebe;
+$banner-bckg: 'src/assets/images/metal-wallpaper.avif';
+
+// $hashtag-color: #ffa621;
+$hashtag-color: #ff8d01;
+// $hashtag-bckg: 'src/assets/images/metal-orange.jpg';

@@ -1,0 +1,252 @@
+@use '../../styles/variables' as v;
+
+.home {
+  text-align: center;
+  h1 {
+    font-size: v.$h1-font-size;
+    font-weight: bold;
+    margin: v.$gap 0;
+    // text-align: center;
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  p,
+  li {
+    line-height: calc(1.2 * v.$gap);
+    font-size: v.$p-font-size;
+  }
+
+  .presentation {
+    padding: 0 calc(0.5 * v.$gap);
+    max-width: 600px;
+    margin: auto;
+
+    &-paragraph {
+      margin-top: v.$gap;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+
+    &-hashtag {
+      margin-top: calc(2 * v.$gap);
+      font-size: v.$h1-font-size;
+      color: v.$hashtag-color;
+      // text-align: center;
+    }
+
+    .read-more {
+      position: relative;
+      width: 130px;
+      height: 40px;
+      text-align: left;
+      background-color: white;
+      margin-top: calc(2 * v.$gap);
+      left: v.$gap;
+
+      &_bindweed {
+        width: 4px;
+        height: 40px;
+        background-color: v.$hashtag-color;
+      }
+
+      &_text {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    .presentation {
+      text-align: justify;
+
+      .read-more {
+        width: 160px;
+        height: 50px;
+
+        &_bindweed {
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .networks {
+    background-color: v.$hashtag-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    margin-top: calc(2 * v.$gap);
+    &-item {
+      &__link {
+        &__pic {
+          max-width: 50px;
+        }
+      }
+    }
+  }
+
+  .awards {
+    padding: 0 calc(0.5 * v.$gap);
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+
+    &-title {
+      text-align: center;
+    }
+
+    &-category {
+      color: v.$hashtag-color;
+      margin: v.$gap 0;
+    }
+
+    &-list {
+      &__item {
+        margin: calc(0.4 * v.$gap) 0;
+
+        span {
+          font-weight: bold;
+          color: v.$secondary-bckg;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 800px) {
+    .awards {
+      text-align: justify;
+    }
+  }
+
+  .teams {
+    margin-top: v.$gap;
+
+    &-subtitle {
+      padding-top: v.$gap;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-track {
+      background-color: v.$hashtag-color;
+
+      .teams-subtitle {
+        color: v.$secondary-bckg;
+        text-shadow: 1px 1px 1px black;
+      }
+
+      .teams-list {
+        gap: calc(3 * v.$gap);
+        padding: calc(2 * v.$gap);
+
+        &__item {
+          &__pic {
+            max-width: 70px;
+            max-height: 60px;
+          }
+        }
+      }
+    }
+
+    &-rally {
+      background-color: v.$secondary-bckg;
+
+      .teams-subtitle {
+        color: v.$hashtag-color;
+        text-shadow: 1px 1px 1px black;
+      }
+
+      .teams-list {
+        gap: calc(2 * v.$gap);
+        padding: calc(2 * v.$gap) calc(4 * v.$gap);
+
+        &__item {
+          &__pic {
+            max-width: 70px;
+            max-height: 60px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 740px) {
+      .teams-track {
+        display: inline-block;
+        width: 50%;
+        height: 270px;
+      }
+
+      .teams-rally {
+        // position: relative;
+        display: inline-block;
+        width: 50%;
+        height: 270px;
+        // top: 0;
+        // right: 0;
+        // margin-left: 50%;
+      }
+    }
+    // @media (min-width: 670px) { // .teams-list { // flex-wrap: nowrap; // } // };
+  }
+
+  .store-preview {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 v.$gap calc(2 * v.$gap) v.$gap;
+
+      .store-preview__previous {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .store-preview__next {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      .store-preview__card {
+        &__pic {
+          width: 200px;
+        }
+
+        &__subtitle {
+          strong {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .home {
+    h1 {
+      font-size: calc(1.2 * v.$h1-font-size);
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    p,
+    li {
+      font-size: calc(1.2 * v.$p-font-size);
+    }
+  }
+}
