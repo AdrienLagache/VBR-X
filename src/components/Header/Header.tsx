@@ -1,9 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
+import { useEffect, useState } from 'react';
 
 function Header(): JSX.Element {
+  const [position, setPosition] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      const moving = window.pageYOffset;
+
+      setVisible(position > moving);
+      setPosition(moving);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
   return (
-    <div className="header">
+    <div className={`header header--${visible ? 'visible' : 'hidden'}`}>
       <div className="main-header">
         <img
           className="header-logo"

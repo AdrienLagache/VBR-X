@@ -4,6 +4,43 @@
   height: calc(5 * v.$gap);
   background-image: url(v.$banner-bckg);
   background-size: cover;
+  margin-top: calc(4.7 * v.$gap);
+
+  &__scrolling-band {
+    display: block;
+    padding: calc(1.5 * v.$gap) 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    height: 200px;
+
+    & div {
+      position: absolute;
+      white-space: nowrap;
+    }
+
+    & div img {
+      display: inline-block;
+      max-height: 40px;
+      max-width: 200px;
+      margin-right: calc(2 * v.$gap);
+      vertical-align: middle;
+    }
+
+    @keyframes defilement {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-65%));
+      }
+    }
+
+    & div {
+      animation: defilement 20s infinite linear;
+    }
+  }
 }
 
 @media (min-width: 550px) {

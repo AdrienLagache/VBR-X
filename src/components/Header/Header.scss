@@ -1,11 +1,15 @@
 @use '../../styles/variables' as v;
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-image: url(v.$header-bckg);
   background-size: cover;
   // padding: calc(0.1 * v.$gap);
   list-style: none;
+  z-index: 3;
 
   .main-header {
     .header-logo {
@@ -65,6 +69,15 @@
     //   }
     // }
   }
+}
+
+.header--visible {
+  top: 0;
+  transition: top 0.4s ease-out;
+}
+.header--hidden {
+  top: calc(-6 * v.$gap);
+  transition: top 0.4s ease-out;
 }
 
 @media (min-width: 600px) {
