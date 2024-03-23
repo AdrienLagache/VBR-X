@@ -1,15 +1,19 @@
-import { NavLink } from 'react-router-dom';
-import './Header.scss';
+// import { useMediaQuery } from 'react-responsive';
+import MediaQuery from 'react-responsive';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
+import './Header.scss';
 
 function Header(): JSX.Element {
+  // const isTablet = useMediaQuery({ query: '(min-width: 900px)' });
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   useEffect(() => {
     const handleScroll = () => {
       const moving = window.pageYOffset;
 
-      setVisible(position > moving);
+      setVisible(position > moving || moving < 100);
       setPosition(moving);
     };
     window.addEventListener('scroll', handleScroll);
@@ -23,30 +27,36 @@ function Header(): JSX.Element {
         <img
           className="header-logo"
           src="src/assets/images/logos/vbr-icon.png"
-          alt=""
+          alt="Le logo de la Virtual Best Racing"
         />
-        <nav className="main-header_nav">
-          <li className="main-header_item">
-            <NavLink to="/home">
-              <p className="main-header_link main-header_link--active">
-                Accueil
-              </p>
-            </NavLink>
-          </li>
-          <div className="main-header_div">
-            <li className="main-header_item">
-              <p className="main-header_link">Menu</p>
-            </li>
-            <li className="main-header_item">
-              <p className="main-header_separation">&nbsp;|&nbsp;</p>
-            </li>
-            <li className="main-header_item">
-              <NavLink to="*">
-                <p className="main-header_link">Panier</p>
-              </NavLink>
-            </li>
-          </div>
-        </nav>
+        <div className="main-header_div">
+          <NavLink to="/home">
+            <p className="main-header_link main-header_link--active">Accueil</p>
+          </NavLink>
+          <MediaQuery maxWidth={900}>
+            <p className="main-header_link">Menu</p>
+          </MediaQuery>
+          <MediaQuery minWidth={900} maxWidth={1200}>
+            <nav className="main-header_nav">
+              <ul className="main-header_list">
+                <li className="main-header_link">historique</li>
+                <li className="main-header_link">Évènements</li>
+                <li className="main-header_link">plus</li>
+              </ul>
+            </nav>
+          </MediaQuery>
+          <MediaQuery minWidth={1200}>
+            <nav className="main-header_nav">
+              <ul className="main-header_list">
+                <li className="main-header_link">
+                  historique de l&apos;association
+                </li>
+                <li className="main-header_link">Évènements</li>
+                <li className="main-header_link">plus</li>
+              </ul>
+            </nav>
+          </MediaQuery>
+        </div>
       </div>
       <nav className="secondary-header_nav">
         <ul className="secondary-header_list">

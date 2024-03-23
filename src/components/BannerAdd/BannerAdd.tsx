@@ -1,12 +1,15 @@
+import PropTypes from 'prop-types';
+
 import './BannerAdd.scss';
 
-function BannerAdd(): JSX.Element {
+interface BannerAddProps {
+  isUp: boolean;
+}
+
+const BannerAdd: React.FC<BannerAddProps> = ({ isUp }) => {
   return (
-    <div className="banner-add">
+    <div className={`banner-add${isUp ? '--up banner-add' : ''}`}>
       <div className="banner-add__scrolling-band">
-        {/* <ImageSlider
-          images={['src/assets/images/logos/adds/ales-agglo.webp']}
-        /> */}
         <div className="images-container">
           <img
             src="src/assets/images/logos/adds/ales-agglo.webp"
@@ -76,6 +79,10 @@ function BannerAdd(): JSX.Element {
       </div>
     </div>
   );
-}
+};
+
+BannerAdd.propTypes = {
+  isUp: PropTypes.bool.isRequired,
+};
 
 export default BannerAdd;

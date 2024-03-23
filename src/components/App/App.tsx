@@ -12,14 +12,14 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <Header />
-      <BannerAdd />
+      <BannerAdd isUp />
       <BannerVbr />
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
-      <BannerAdd />
+      <BannerAdd isUp={false} />
       <Footer />
     </div>
   );

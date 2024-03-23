@@ -1,19 +1,22 @@
 @use '../../styles/variables' as v;
 
+.banner-add--up {
+  margin-top: calc(4.7 * v.$gap);
+}
+
 .banner-add {
   height: calc(5 * v.$gap);
   background-image: url(v.$banner-bckg);
   background-size: cover;
-  margin-top: calc(4.7 * v.$gap);
 
   &__scrolling-band {
     display: block;
-    padding: calc(1.5 * v.$gap) 0;
+    padding-top: calc(1.3 * v.$gap);
     overflow: hidden;
     position: relative;
     width: 100%;
-    max-width: 640px;
-    height: 200px;
+    // max-width: 640px;
+    height: 70px;
 
     & div {
       position: absolute;
@@ -33,7 +36,7 @@
         transform: translateX(0);
       }
       100% {
-        transform: translateX(calc(-65%));
+        transform: translateX(calc(-67.25%));
       }
     }
 
@@ -43,14 +46,26 @@
   }
 }
 
-@media (min-width: 550px) {
+@media (min-width: 600px) {
   .banner-add {
-    height: calc(6 * v.$gap);
+    height: calc(5.2 * v.$gap);
+  }
+
+  .banner-add--up {
+    margin-top: calc(7.5 * v.$gap);
   }
 }
 
 @media (min-width: 900px) {
   .banner-add {
     height: calc(7 * v.$gap);
+
+    &__scrolling-band {
+      top: 15px;
+    }
+  }
+
+  .banner-add--up {
+    margin-top: calc(11.2 * v.$gap);
   }
 }
