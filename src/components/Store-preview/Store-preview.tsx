@@ -20,10 +20,13 @@ function StorePreview(): JSX.Element {
     const sessionImage = sessionStorage.getItem('mySliderImage');
     const myImageArr = document.querySelectorAll('.slider__img');
 
-    if (sessionImage > 0) {
-      myImageArr[sessionImage].classList.add('slider__img--current');
+    if (sessionImage !== null && parseInt(sessionImage) > 0) {
+      const index = parseInt(sessionImage);
+      if (index < myImageArr.length) {
+        myImageArr[index].classList.add('slider__img--current');
+      }
     } else {
-      myImageArr[0].classList.add('slider__img--current');
+      myImageArr[0]?.classList.add('slider__img--current');
     }
 
     sliderAdds.init();
