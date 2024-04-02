@@ -197,36 +197,36 @@
     }
   }
 
-  .store-preview {
-    &__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 v.$gap calc(2 * v.$gap) v.$gap;
+  // .store-preview {
+  //   &__container {
+  //     display: flex;
+  //     justify-content: space-between;
+  //     align-items: center;
+  //     padding: 0 v.$gap calc(2 * v.$gap) v.$gap;
 
-      .store-preview__previous {
-        font-size: 2em;
-        font-weight: bold;
-      }
+  //     .store-preview__previous {
+  //       font-size: 2em;
+  //       font-weight: bold;
+  //     }
 
-      .store-preview__next {
-        font-size: 2em;
-        font-weight: bold;
-      }
+  //     .store-preview__next {
+  //       font-size: 2em;
+  //       font-weight: bold;
+  //     }
 
-      .store-preview__card {
-        &__pic {
-          width: 200px;
-        }
+  //     .store-preview__card {
+  //       &__pic {
+  //         width: 200px;
+  //       }
 
-        &__subtitle {
-          strong {
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
+  //       &__subtitle {
+  //         strong {
+  //           font-weight: bold;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media (min-width: 800px) {

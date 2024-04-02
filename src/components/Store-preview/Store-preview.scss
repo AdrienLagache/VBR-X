@@ -1,0 +1,36 @@
+@use '../../styles/variables' as v;
+
+.store-preview {
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 v.$gap calc(2 * v.$gap) v.$gap;
+
+    &__img {
+      order: -1;
+      display: none;
+    }
+
+    &__img--current {
+      display: block;
+      height: 120px;
+    }
+
+    &__btn:first-child {
+      order: -2;
+    }
+
+    .store-preview__card {
+      &__pic {
+        width: 200px;
+      }
+
+      &__subtitle {
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

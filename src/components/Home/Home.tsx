@@ -1,3 +1,4 @@
+import StorePreview from '../Store-preview/Store-preview';
 import './Home.scss';
 
 function Home(): JSX.Element {
@@ -270,25 +271,7 @@ function Home(): JSX.Element {
           </ul>
         </div>
       </section>
-      <section className="store-preview">
-        <h1 className="store-preview__title">Nos produits</h1>
-        <div className="store-preview__container">
-          <span className="store-preview__previous">&lt;</span>
-          <figure className="store-preview__card">
-            <img
-              className="store-preview__card__pic"
-              src="./assets/images/store/t-shirt.webp"
-              alt="le t-shirt VBR"
-            />
-            <figcaption className="store-preview__card__subtitle">
-              T-shirt officiel VBR
-              <br />
-              <strong>39,00€</strong>
-            </figcaption>
-          </figure>
-          <span className="store-preview__next">&gt;</span>
-        </div>
-      </section>
+      <StorePreview />
     </main>
   );
 }

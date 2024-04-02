@@ -17,7 +17,7 @@ const BannerAdd: React.FC<BannerAddProps> = ({ isUp }) => {
           />
           <img
             src="./assets/images/logos/adds/ales-cevennes.webp"
-            alt="Alès Cevnnes"
+            alt="Alès Cevennes"
           />
           <img
             src="./assets/images/logos/adds/benjx.webp"
@@ -61,7 +61,7 @@ const BannerAdd: React.FC<BannerAddProps> = ({ isUp }) => {
           />
           <img
             src="./assets/images/logos/adds/ales-cevennes.webp"
-            alt="Alès Cevnnes"
+            alt="Alès Cevennes"
           />
           <img
             src="./assets/images/logos/adds/benjx.webp"
