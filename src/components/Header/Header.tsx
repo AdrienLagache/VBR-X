@@ -38,7 +38,7 @@ function Header(): JSX.Element {
       <div className="main-header">
         <img
           className="header-logo"
-          src="src/assets/images/logos/vbr-icon.png"
+          src="./assets/images/logos/vbr-icon.png"
           alt="Le logo de la Virtual Best Racing"
         />
         <div className="main-header_div">

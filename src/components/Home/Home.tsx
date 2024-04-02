@@ -48,7 +48,7 @@ function Home(): JSX.Element {
           >
             <img
               className="networks-item__link__pic"
-              src="src/assets/images/logos/courrier.png"
+              src="./assets/images/logos/courrier.png"
               alt="une icone mail"
             />
           </a>
@@ -62,7 +62,7 @@ function Home(): JSX.Element {
           >
             <img
               className="networks-item__link__pic"
-              src="src/assets/images/logos/youtube.png"
+              src="./assets/images/logos/youtube.png"
               alt="une icone mail"
             />
           </a>
@@ -76,7 +76,7 @@ function Home(): JSX.Element {
           >
             <img
               className="networks-item__link__pic"
-              src="src/assets/images/logos/facebook.png"
+              src="./assets/images/logos/facebook.png"
               alt="une icone mail"
             />
           </a>
@@ -186,7 +186,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/ams2.png"
+                src="./assets/images/logos/ams2.png"
                 alt="le logo de Automobilista 2"
               />
             </li>
@@ -194,7 +194,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/iracing.png"
+                src="./assets/images/logos/iracing.png"
                 alt="le logo de iracing"
               />
             </li>
@@ -202,7 +202,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/rfactor2.png"
+                src="./assets/images/logos/rfactor2.png"
                 alt="le logo de RFactor 2"
               />
             </li>
@@ -210,7 +210,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/acc.png"
+                src="./assets/images/logos/acc.png"
                 alt="le logo de Assetto corsa competizione"
               />
             </li>
@@ -218,7 +218,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/gt.png"
+                src="./assets/images/logos/gt.png"
                 alt="le logo de Grand Turismo"
               />
             </li>
@@ -226,7 +226,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/f1.svg"
+                src="./assets/images/logos/f1.svg"
                 alt="le logo de F1 2019"
               />
             </li>
@@ -239,7 +239,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/rbr.png"
+                src="./assets/images/logos/rbr.png"
                 alt="le logo de Richard Burns rally"
               />
             </li>
@@ -247,7 +247,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/wrc.png"
+                src="./assets/images/logos/wrc.png"
                 alt="le logo de WRC 9"
               />
             </li>
@@ -255,7 +255,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/dirt.svg"
+                src="./assets/images/logos/dirt.svg"
                 alt="le logo de Dirt rally 2.0"
               />
             </li>
@@ -263,7 +263,7 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="src/assets/images/logos/rx.jpg"
+                src="./assets/images/logos/rx.jpg"
                 alt="le logo du championnat WRX"
               />
             </li>
@@ -277,7 +277,7 @@ function Home(): JSX.Element {
           <figure className="store-preview__card">
             <img
               className="store-preview__card__pic"
-              src="src/assets/images/store/t-shirt.webp"
+              src="./assets/images/store/t-shirt.webp"
               alt="le t-shirt VBR"
             />
             <figcaption className="store-preview__card__subtitle">
