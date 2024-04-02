@@ -1,4 +1,3 @@
-// import { useMediaQuery } from 'react-responsive';
 import MediaQuery from 'react-responsive';
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -6,10 +5,22 @@ import { NavLink } from 'react-router-dom';
 import './Header.scss';
 
 function Header(): JSX.Element {
-  // const isTablet = useMediaQuery({ query: '(min-width: 900px)' });
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
+
   useEffect(() => {
+    const handleMainMenu = () => {
+      const scrollingMenu = document.querySelector('#secondary-header');
+      if (scrollingMenu) {
+        scrollingMenu.classList.toggle('secondary-header_nav--hidden');
+        scrollingMenu.classList.toggle('secondary-header_nav');
+      }
+    };
+    const menuIcon = document.querySelector('#menu');
+    if (menuIcon) {
+      menuIcon.addEventListener('click', handleMainMenu);
+    }
+
     const handleScroll = () => {
       const moving = window.pageYOffset;
 
@@ -21,6 +32,7 @@ function Header(): JSX.Element {
       window.removeEventListener('scroll', handleScroll);
     };
   });
+
   return (
     <div className={`header header--${visible ? 'visible' : 'hidden'}`}>
       <div className="main-header">
@@ -34,7 +46,9 @@ function Header(): JSX.Element {
             <p className="main-header_link main-header_link--active">Accueil</p>
           </NavLink>
           <MediaQuery maxWidth={900}>
-            <p className="main-header_link">Menu</p>
+            <p className="main-header_link" id="menu">
+              Menu
+            </p>
           </MediaQuery>
           <MediaQuery minWidth={900} maxWidth={1200}>
             <nav className="main-header_nav">
@@ -58,7 +72,7 @@ function Header(): JSX.Element {
           </MediaQuery>
         </div>
       </div>
-      <nav className="secondary-header_nav">
+      <nav className="secondary-header_nav--hidden" id="secondary-header">
         <ul className="secondary-header_list">
           <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">

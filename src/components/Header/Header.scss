@@ -8,7 +8,6 @@
   height: 80px;
   background-image: url(v.$header-bckg);
   background-size: cover;
-  // padding: calc(0.1 * v.$gap);
   list-style: none;
   z-index: 3;
 
@@ -62,15 +61,14 @@
       }
     }
   }
-  .secondary-header_nav {
-    display: none;
 
-    // .secondary-header_list {
-    //   .secondary-header_item {
-    //     .secondary-header_link {
-    //     }
-    //   }
-    // }
+  .secondary-header_nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  .secondary-header_nav--hidden {
+    display: none;
   }
 }
 
