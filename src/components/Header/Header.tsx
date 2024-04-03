@@ -42,7 +42,7 @@ function Header(): JSX.Element {
           alt="Le logo de la Virtual Best Racing"
         />
         <div className="main-header_div">
-          <NavLink to="/home">
+          <NavLink to="/">
             <p className="main-header_link main-header_link--active">Accueil</p>
           </NavLink>
           <MediaQuery maxWidth={900}>
@@ -53,7 +53,9 @@ function Header(): JSX.Element {
           <MediaQuery minWidth={900} maxWidth={1200}>
             <nav className="main-header_nav">
               <ul className="main-header_list">
-                <li className="main-header_link">historique</li>
+                <NavLink to="/historique">
+                  <li className="main-header_link">historique</li>
+                </NavLink>
                 <li className="main-header_link">Évènements</li>
                 <li className="main-header_link">plus</li>
               </ul>
@@ -62,9 +64,11 @@ function Header(): JSX.Element {
           <MediaQuery minWidth={1200}>
             <nav className="main-header_nav">
               <ul className="main-header_list">
-                <li className="main-header_link">
-                  historique de l&apos;association
-                </li>
+                <NavLink to="/historique">
+                  <li className="main-header_link">
+                    historique de l&apos;association
+                  </li>
+                </NavLink>
                 <li className="main-header_link">Évènements</li>
                 <li className="main-header_link">plus</li>
               </ul>
@@ -74,11 +78,11 @@ function Header(): JSX.Element {
       </div>
       <nav className="secondary-header_nav--hidden" id="secondary-header">
         <ul className="secondary-header_list">
-          <li className="secondary-header_item">
-            <a className="secondary-header_link" href="*">
+          <NavLink to="/historique">
+            <li className="secondary-header_item">
               Historique de l&apos;association
-            </a>
-          </li>
+            </li>
+          </NavLink>
           <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">
               Evènements

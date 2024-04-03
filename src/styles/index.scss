@@ -15,3 +15,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-size: v.$h1-font-size;
+  font-weight: bold;
+  margin: v.$gap 0;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+p,
+li {
+  line-height: calc(1.2 * v.$gap);
+  font-size: v.$p-font-size;
+}

@@ -2,22 +2,21 @@
 
 .home {
   text-align: center;
-  h1 {
-    font-size: v.$h1-font-size;
-    font-weight: bold;
-    margin: v.$gap 0;
-    // text-align: center;
-  }
+  // h1 {
+  //   font-size: v.$h1-font-size;
+  //   font-weight: bold;
+  //   margin: v.$gap 0;
+  // }
 
-  h2 {
-    font-weight: bold;
-  }
+  // h2 {
+  //   font-weight: bold;
+  // }
 
-  p,
-  li {
-    line-height: calc(1.2 * v.$gap);
-    font-size: v.$p-font-size;
-  }
+  // p,
+  // li {
+  //   line-height: calc(1.2 * v.$gap);
+  //   font-size: v.$p-font-size;
+  // }
 
   .presentation {
     padding: 0 calc(0.5 * v.$gap);

@@ -1,0 +1,29 @@
+@use '../../styles/variables' as v;
+
+.historic {
+  text-align: center;
+  padding: 0 calc(0.5 * v.$gap);
+  max-width: 700px;
+  margin: auto;
+
+  &-title {
+    margin-bottom: v.$gap;
+    margin-top: 0;
+  }
+
+  &-content {
+    margin-bottom: v.$gap;
+  }
+
+  &-list {
+    &__item {
+      margin-bottom: v.$gap;
+    }
+  }
+
+  &-signature {
+    // font-size: v.$h2-font-size;
+    color: v.$hashtag-color;
+    margin-bottom: v.$gap;
+  }
+}
