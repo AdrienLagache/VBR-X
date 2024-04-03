@@ -7,23 +7,11 @@ import './Header.scss';
 function Header(): JSX.Element {
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
+  const [secVisible, setSecVisible] = useState(false);
 
   useEffect(() => {
-    const handleMainMenu = () => {
-      const scrollingMenu = document.querySelector('#secondary-header');
-      if (scrollingMenu) {
-        scrollingMenu.classList.toggle('secondary-header_nav--hidden');
-        scrollingMenu.classList.toggle('secondary-header_nav');
-      }
-    };
-    const menuIcon = document.querySelector('#menu');
-    if (menuIcon) {
-      menuIcon.addEventListener('click', handleMainMenu);
-    }
-
     const handleScroll = () => {
       const moving = window.pageYOffset;
-
       setVisible(position > moving || moving < 100);
       setPosition(moving);
     };
@@ -32,6 +20,34 @@ function Header(): JSX.Element {
       window.removeEventListener('scroll', handleScroll);
     };
   });
+
+  useEffect(() => {
+    // const handleMainMenu = () => {
+    //   setSecVisible(!secVisible);
+    // };
+
+    // const menuIcon = document.querySelector('#menu');
+    // menuIcon?.addEventListener('click', handleMainMenu);
+    const handleMainMenu = () => {
+      const scrollingMenu = document.querySelector('#secondary-header');
+      if (
+        scrollingMenu &&
+        scrollingMenu.classList.contains('secondary-header_nav--hidden')
+      ) {
+        scrollingMenu.classList.remove('secondary-header_nav--hidden');
+        scrollingMenu.classList.add('secondary-header_nav--visible');
+      } else if (
+        scrollingMenu &&
+        scrollingMenu.classList.contains('secondary-header_nav--visible')
+      ) {
+        scrollingMenu.classList.remove('secondary-header_nav--visible');
+        scrollingMenu.classList.add('secondary-header_nav--hidden');
+      }
+    };
+
+    const menuIcon = document.querySelector('#menu');
+    menuIcon?.addEventListener('click', handleMainMenu);
+  }, []);
 
   return (
     <div className={`header header--${visible ? 'visible' : 'hidden'}`}>
@@ -76,7 +92,13 @@ function Header(): JSX.Element {
           </MediaQuery>
         </div>
       </div>
-      <nav className="secondary-header_nav--hidden" id="secondary-header">
+      <nav
+        // className={`secondary-header_nav${
+        //   secVisible ? '--visible' : '--hidden'
+        // }`}
+        className="secondary-header_nav--hidden"
+        id="secondary-header"
+      >
         <ul className="secondary-header_list">
           <NavLink to="/historique">
             <li className="secondary-header_item">
