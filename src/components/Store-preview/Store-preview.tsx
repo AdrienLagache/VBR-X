@@ -5,29 +5,37 @@ import './Store-preview.scss';
 
 function StorePreview(): JSX.Element {
   useEffect(() => {
-    const sliderContainer = document.querySelector('.slider');
+    // const sliderContainer = document.querySelector('.slider');
 
-    for (let i = 0; i < sliderAdds.sliderImages.length; i++) {
-      const newSliderImage = document.createElement('img');
+    // for (let i = 0; i < sliderAdds.sliderImages.length; i++) {
+    //   const newSliderFigure = document.createElement('figure');
+    //   newSliderFigure.classList.add('store-preview__card');
+    //   sliderContainer ? sliderContainer.append(newSliderFigure) : '';
 
-      newSliderImage.src = 'assets/images/store/' + sliderAdds.sliderImages[i];
-      newSliderImage.classList.add('slider__img');
-      newSliderImage.alt = sliderAdds.sliderAlt[i];
+    //   const newSliderImage = document.createElement('img');
 
-      sliderContainer ? sliderContainer.append(newSliderImage) : '';
-    }
+    //   newSliderImage.src = 'assets/images/store/' + sliderAdds.sliderImages[i];
+    //   newSliderImage.classList.add('slider__img');
+    //   newSliderImage.alt = sliderAdds.sliderAlt[i];
+    //   newSliderFigure.append(newSliderImage);
 
-    const sessionImage = sessionStorage.getItem('mySliderImage');
-    const myImageArr = document.querySelectorAll('.slider__img');
+    //   const newSliderFigcaption = document.createElement('figcaption');
+    //   newSliderFigcaption.classList.add('store-preview__card__subtitle');
+    //   newSliderFigure.append(newSliderFigcaption);
+    // }
 
-    if (sessionImage !== null && parseInt(sessionImage) > 0) {
-      const index = parseInt(sessionImage);
-      if (index < myImageArr.length) {
-        myImageArr[index].classList.add('slider__img--current');
-      }
-    } else {
-      myImageArr[0]?.classList.add('slider__img--current');
-    }
+    // const sessionImage = sessionStorage.getItem('mySliderImage');
+    // const myImageArr = document.querySelectorAll('.slider__img');
+
+    // if (sessionImage !== null && parseInt(sessionImage) > 0) {
+    //   const index = parseInt(sessionImage);
+    //   if (index < myImageArr.length) {
+    //     myImageArr[index].classList.add('slider__img--current');
+    //   }
+    // } else {
+    //   myImageArr[0]?.classList.add('slider__img--current');
+    // }
+    sliderAdds.generateSliderImages();
 
     sliderAdds.init();
   }, []);
