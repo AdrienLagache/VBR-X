@@ -22,32 +22,27 @@ function Header(): JSX.Element {
   });
 
   useEffect(() => {
-    // const handleMainMenu = () => {
-    //   setSecVisible(!secVisible);
-    // };
-
-    // const menuIcon = document.querySelector('#menu');
-    // menuIcon?.addEventListener('click', handleMainMenu);
     const handleMainMenu = () => {
-      const scrollingMenu = document.querySelector('#secondary-header');
-      if (
-        scrollingMenu &&
-        scrollingMenu.classList.contains('secondary-header_nav--hidden')
-      ) {
-        scrollingMenu.classList.remove('secondary-header_nav--hidden');
-        scrollingMenu.classList.add('secondary-header_nav--visible');
-      } else if (
-        scrollingMenu &&
-        scrollingMenu.classList.contains('secondary-header_nav--visible')
-      ) {
-        scrollingMenu.classList.remove('secondary-header_nav--visible');
-        scrollingMenu.classList.add('secondary-header_nav--hidden');
+      setSecVisible((prevSecVisible) => !prevSecVisible);
+    };
+
+    const handleOutsideClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (target && secVisible && !target.closest('#menu')) {
+        setSecVisible(false);
       }
     };
 
     const menuIcon = document.querySelector('#menu');
     menuIcon?.addEventListener('click', handleMainMenu);
-  }, []);
+
+    window.addEventListener('click', handleOutsideClick);
+
+    return () => {
+      menuIcon?.removeEventListener('click', handleMainMenu);
+      window.removeEventListener('click', handleOutsideClick);
+    };
+  }, [secVisible]);
 
   return (
     <div className={`header header--${visible ? 'visible' : 'hidden'}`}>
@@ -66,18 +61,18 @@ function Header(): JSX.Element {
               Menu
             </p>
           </MediaQuery>
-          <MediaQuery minWidth={900} maxWidth={1200}>
+          <MediaQuery minWidth={900}>
             <nav className="main-header_nav">
               <ul className="main-header_list">
                 <NavLink to="/historique">
-                  <li className="main-header_link">historique</li>
+                  <li className="main-header_link">À propos</li>
                 </NavLink>
                 <li className="main-header_link">Évènements</li>
                 <li className="main-header_link">plus</li>
               </ul>
             </nav>
           </MediaQuery>
-          <MediaQuery minWidth={1200}>
+          {/* <MediaQuery minWidth={1200}>
             <nav className="main-header_nav">
               <ul className="main-header_list">
                 <NavLink to="/historique">
@@ -89,21 +84,19 @@ function Header(): JSX.Element {
                 <li className="main-header_link">plus</li>
               </ul>
             </nav>
-          </MediaQuery>
+          </MediaQuery> */}
         </div>
       </div>
       <nav
-        // className={`secondary-header_nav${
-        //   secVisible ? '--visible' : '--hidden'
-        // }`}
-        className="secondary-header_nav--hidden"
+        className={`secondary-header_nav${
+          secVisible ? '--visible' : '--hidden'
+        }`}
+        // className="secondary-header_nav--hidden"
         id="secondary-header"
       >
         <ul className="secondary-header_list">
           <NavLink to="/historique">
-            <li className="secondary-header_item">
-              Historique de l&apos;association
-            </li>
+            <li className="secondary-header_item">À propos</li>
           </NavLink>
           <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">
