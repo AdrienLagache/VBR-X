@@ -35,8 +35,8 @@ function Historic(): JSX.Element {
           accéder au mieux vers le haut niveau. Notre structure est reconnue
           pour s'être distinguée au + Haut Niveau International sur les Series
           Forza Motorsport, (d'où notre célébre et Légendaire FORZA VBR)...
-          Notamment sur les (Worlds Compétitions Officielles et de Références
-          Forza), les Célébres "TORA". Puis 2 fois au F1 Esports Series (2017 et
+          Notamment sur les Worlds (Compétitions Officielles et de Références
+          Forza), les célébres "TORA". Puis 2 fois au F1 Esports Series (2017 et
           2019 en Angleterre) et pour ses 3éme places Mondiale par équipe sur
           WRC 2019 et WRC 2020, + une P4 Team WRC 2021 et une P6 en "Grande
           Finale WRC 2021 à Athénes", ainsi que pour sa P6 Team VBR World 2021
