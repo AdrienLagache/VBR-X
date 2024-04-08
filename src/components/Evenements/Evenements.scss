@@ -1,0 +1,39 @@
+@use '../../styles/variables' as v;
+
+.evenements {
+  .event {
+    // background-image: url('assets/images/wrc9.jpg');
+    // background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding: calc(3 * v.$gap);
+
+    &-title {
+      position: relative;
+      z-index: 2;
+    }
+
+    &-content {
+      position: relative;
+    }
+  }
+
+  .event:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background-size: cover;
+  }
+
+  .wrc9:before {
+    background-image: url('assets/images/wrc9.jpg');
+  }
+
+  .wrc8:before {
+    background-image: url('assets/images/wrc8.webp');
+  }
+}

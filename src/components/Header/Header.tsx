@@ -68,7 +68,9 @@ function Header(): JSX.Element {
                   <NavLink to="/historique">À propos</NavLink>
                 </li>
 
-                <li className="main-header_link">Évènements</li>
+                <li className="main-header_link">
+                  <NavLink to="/evenements">Évènements</NavLink>
+                </li>
                 <li className="main-header_link">plus</li>
               </ul>
             </nav>
@@ -101,9 +103,7 @@ function Header(): JSX.Element {
           </li>
 
           <li className="secondary-header_item">
-            <a className="secondary-header_link" href="*">
-              Evènements
-            </a>
+            <NavLink to="/evenements">Evènements</NavLink>
           </li>
           <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">

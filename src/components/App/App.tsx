@@ -6,6 +6,7 @@ import BannerAdd from '../BannerAdd/BannerAdd';
 import Footer from '../Footer/Footer';
 import BannerVbr from '../BannerVbr/BannerVbr';
 import Historic from '../Historic/Historic';
+import Evenements from '../Evenements/Evenements';
 
 import './App.scss';
 
@@ -19,6 +20,7 @@ function App(): JSX.Element {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/historique" element={<Historic />} />
+          <Route path="/evenements" element={<Evenements />} />
         </Routes>
       </div>
       <BannerAdd isUp={false} />
