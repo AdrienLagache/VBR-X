@@ -2,19 +2,25 @@
 
 .evenements {
   .event {
-    // background-image: url('assets/images/wrc9.jpg');
-    // background-size: cover;
+    background-image: url('assets/images/wrc9.jpg');
+    background-size: cover;
     position: relative;
     overflow: hidden;
     padding: calc(3 * v.$gap);
+    margin: 0 calc(2 * v.$gap);
 
     &-title {
       position: relative;
-      z-index: 2;
+      // z-index: 1;
+      color: v.$hashtag-color;
+      text-shadow: 0.5px 0.5px 1px white;
     }
 
     &-content {
       position: relative;
+      // z-index: 1;
+      color: white;
+      text-shadow: 0.5px 0.5px 1px black;
     }
   }
 
@@ -22,18 +28,22 @@
     content: ' ';
     display: block;
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
-    opacity: 0.5;
-    background-size: cover;
+    opacity: 0.2;
   }
 
-  .wrc9:before {
+  .wrc9 {
     background-image: url('assets/images/wrc9.jpg');
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: 50% 0;
   }
 
-  .wrc8:before {
+  .wrc8 {
     background-image: url('assets/images/wrc8.webp');
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: 100% 0;
   }
 }
