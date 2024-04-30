@@ -9,6 +9,7 @@ import Historic from '../Historic/Historic';
 import Evenements from '../Evenements/Evenements';
 
 import './App.scss';
+import Adds from '../Adds/Adds';
 
 function App(): JSX.Element {
   return (
@@ -21,6 +22,7 @@ function App(): JSX.Element {
           <Route path="/" element={<Home />} />
           <Route path="/historique" element={<Historic />} />
           <Route path="/evenements" element={<Evenements />} />
+          <Route path="/sponsors" element={<Adds />} />
         </Routes>
       </div>
       <BannerAdd isUp={false} />

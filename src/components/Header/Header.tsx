@@ -106,9 +106,9 @@ function Header(): JSX.Element {
             <NavLink to="/evenements">Evènements</NavLink>
           </li>
           <li className="secondary-header_item">
-            <a className="secondary-header_link" href="*">
+            <NavLink to="/sponsors">
               Sponsors et partenaires de l&apos;association
-            </a>
+            </NavLink>
           </li>
           <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">

@@ -1,7 +1,7 @@
 @use '../../styles/variables' as v;
 
-.evenements {
-  .event {
+.adds {
+  .add {
     position: relative;
     overflow: hidden;
     padding: calc(3 * v.$gap);
@@ -29,7 +29,7 @@
     }
   }
 
-  .wrc9:before {
+  .gt2i:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -37,14 +37,44 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/images/wrc9.jpg');
-    background-size: cover;
+    background-image: url('assets/images/gt2i.webp');
+    background-size: 102%;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    // opacity: 0.5;
+  }
+
+  .benjx:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/benjx.webp');
+    background-size: contain;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    // opacity: 0.5;
+  }
+
+  .newgo:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/newgo.webp');
+    background-size: contain;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
 
-  .wrc8:before {
+  .driverxperience:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -52,54 +82,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/images/wrc8.jpg');
-    background-size: cover;
-    background-position: 100% 0;
+    background-image: url('assets/images/driverxperience.webp');
+    background-size: contain;
+    background-position: 50%;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    // opacity: 0.5;
   }
-
-  .wrc7:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/images/wrc7.jpg');
-    background-size: cover;
-    background-position: 10% 0;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-  }
-
-  .f1:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/images/f1.jpg');
-    background-size: cover;
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-  }
-
-  // .wrc9 {
-  //   background-image: url('assets/images/wrc9.jpg');
-  //   background-repeat: no-repeat;
-  //   // background-size: 130%;
-  //   background-position: 50% 0;
-  // }
-
-  // .wrc8 {
-  //   background-image: url('assets/images/wrc8.webp');
-  //   background-repeat: no-repeat;
-  //   // background-size: 140%;
-  //   background-position: 100% 0;
-  // }
 }
