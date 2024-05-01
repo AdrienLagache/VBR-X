@@ -8,6 +8,7 @@ function Header(): JSX.Element {
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [secVisible, setSecVisible] = useState(false);
+  const [isActive, setIsActive] = useState('accueil');
 
   useEffect(() => {
     const handleScroll = () => {

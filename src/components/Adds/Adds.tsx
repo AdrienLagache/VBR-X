@@ -11,6 +11,12 @@ function Adds(): JSX.Element {
       <div className="add proracecafe"></div>
       <div className="add costanzo"></div>
       <div className="add fabdesign"></div>
+      <div className="add polemeca"></div>
+      <div className="add spiruline"></div>
+      <div className="add infoware"></div>
+      <div className="add alesagglo"></div>
+      <div className="add alescevennes"></div>
+      <div className="add cammus"></div>
     </section>
   );
 }
