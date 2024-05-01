@@ -8,7 +8,7 @@ function Header(): JSX.Element {
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [secVisible, setSecVisible] = useState(false);
-  const [isActive, setIsActive] = useState('accueil');
+  const path = window.location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,14 +48,28 @@ function Header(): JSX.Element {
   return (
     <div className={`header header--${visible ? 'visible' : 'hidden'}`}>
       <div className="main-header">
-        <img
-          className="header-logo"
-          src="./assets/images/logos/vbr-icon.png"
-          alt="Le logo de la Virtual Best Racing"
-        />
+        <NavLink to="/">
+          <img
+            className="header-logo"
+            src="./assets/images/logos/vbr-icon.png"
+            alt="Le logo de la Virtual Best Racing"
+          />
+        </NavLink>
         <div className="main-header_div">
-          <p className="main-header_link main-header_link--active">
-            <NavLink to="/">Accueil</NavLink>
+          <p>
+            <NavLink
+              to={path}
+              className={({ isActive }) => {
+                return isActive
+                  ? 'main-header_link main-header_link--active'
+                  : 'main-header_link';
+              }}
+            >
+              {path === '/' ? 'Accueil' : ''}
+              {path === '/historique' || '' ? 'À propos' : ''}
+              {path === '/evenements' || '' ? 'Évènements' : ''}
+              {path === '/sponsors' || '' ? 'Sponsors' : ''}
+            </NavLink>
           </p>
           <MediaQuery maxWidth={900}>
             <p className="main-header_link" id="menu">
@@ -76,19 +90,6 @@ function Header(): JSX.Element {
               </ul>
             </nav>
           </MediaQuery>
-          {/* <MediaQuery minWidth={1200}>
-            <nav className="main-header_nav">
-              <ul className="main-header_list">
-                <NavLink to="/historique">
-                  <li className="main-header_link">
-                    historique de l&apos;association
-                  </li>
-                </NavLink>
-                <li className="main-header_link">Évènements</li>
-                <li className="main-header_link">plus</li>
-              </ul>
-            </nav>
-          </MediaQuery> */}
         </div>
       </div>
       <nav
