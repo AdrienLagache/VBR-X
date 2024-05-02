@@ -118,6 +118,10 @@ function Header(): JSX.Element {
       >
         <ul className="secondary-header_list">
           <li className="secondary-header_item">
+            <NavLink to="/">Accueil</NavLink>
+          </li>
+
+          <li className="secondary-header_item">
             <NavLink to="/historique">À propos</NavLink>
           </li>
 

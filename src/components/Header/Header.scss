@@ -63,8 +63,29 @@
   }
 
   .secondary-header_nav--visible {
+    position: absolute;
+    top: 80px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
+    font-size: v.$h2-font-size;
+
+    .secondary-header_list {
+      padding: v.$gap;
+
+      .secondary-header_item {
+        margin-bottom: calc(0.5 * v.$gap);
+        border-bottom: 1px solid rgba(190, 190, 190, 0.5);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          color: v.$hashtag-color;
+        }
+      }
+    }
   }
 
   .secondary-header_nav--hidden {
