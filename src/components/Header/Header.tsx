@@ -8,7 +8,12 @@ function Header(): JSX.Element {
   const [position, setPosition] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [secVisible, setSecVisible] = useState(false);
-  const path = window.location.pathname;
+  const [path, setPath] = useState(window.location.pathname);
+  const pathDependancy = window.location.pathname;
+
+  useEffect(() => {
+    setPath(window.location.pathname);
+  }, [pathDependancy]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +53,12 @@ function Header(): JSX.Element {
   return (
     <div className={`header header--${visible ? 'visible' : 'hidden'}`}>
       <div className="main-header">
-        <NavLink to="/">
+        <NavLink
+          to="/"
+          onClick={() => {
+            setPath('/');
+          }}
+        >
           <img
             className="header-logo"
             src="/assets/images/logos/vbr-icon.png"
@@ -58,7 +68,7 @@ function Header(): JSX.Element {
         <div className="main-header_div">
           <p>
             <NavLink
-              to={path}
+              to={path.startsWith('/evenements') ? '/evenements' : path}
               className={({ isActive }) => {
                 return isActive
                   ? 'main-header_link main-header_link--active'
@@ -66,9 +76,9 @@ function Header(): JSX.Element {
               }}
             >
               {path === '/' ? 'Accueil' : ''}
-              {path === '/historique' || '' ? 'À propos' : ''}
-              {path === '/evenements' || '' ? 'Évènements' : ''}
-              {path === '/sponsors' || '' ? 'Sponsors' : ''}
+              {path === '/historique' ? 'À propos' : ''}
+              {path.startsWith('/evenements') ? 'Évènements' : ''}
+              {path === '/sponsors' ? 'Sponsors' : ''}
             </NavLink>
           </p>
           <MediaQuery maxWidth={900}>

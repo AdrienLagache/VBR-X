@@ -1,0 +1,52 @@
+@use '../../styles/variables' as v;
+
+.results {
+  &-container {
+    padding: 0 calc(0.5 * v.$gap);
+    margin-bottom: v.$gap;
+
+    .results-title {
+      text-align: center;
+      font-size: v.$h1-font-size;
+    }
+
+    .results-subtitle {
+      color: v.$hashtag-color;
+      font-size: v.$h2-font-size;
+    }
+
+    .results-description {
+      font-size: v.$p-font-size;
+      // margin-top: calc(0.5 * v.$gap);
+      font-weight: v.$p-font-weight;
+
+      // &:last-child {
+      //   margin-bottom: v.$gap;
+      // }
+
+      span {
+        color: v.$secondary-bckg;
+      }
+    }
+
+    .results-images {
+      margin-top: v.$gap;
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+        width: 50%;
+        padding: 1px;
+        border-radius: 5px;
+
+        &:first-child {
+          width: 100%;
+        }
+      }
+    }
+
+    // .results-list {
+    //   margin-bottom: v.$gap;
+    // }
+  }
+}
