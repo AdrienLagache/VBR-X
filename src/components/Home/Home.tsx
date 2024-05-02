@@ -1,4 +1,6 @@
+import { NavLink } from 'react-router-dom';
 import StorePreview from '../Store-preview/Store-preview';
+
 import './Home.scss';
 
 function Home(): JSX.Element {
@@ -36,7 +38,9 @@ function Home(): JSX.Element {
         <p className="presentation-hashtag">#forzaVBRforever</p>
         <div className="read-more">
           <div className="read-more_bindweed" />
-          <p className="read-more_text">En savoir plus &gt;</p>
+          <NavLink to="/historique" className="read-more_text">
+            En savoir plus &gt;
+          </NavLink>
         </div>
       </section>
       <ul className="networks">

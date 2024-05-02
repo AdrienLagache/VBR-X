@@ -51,7 +51,7 @@ function Header(): JSX.Element {
         <NavLink to="/">
           <img
             className="header-logo"
-            src="./assets/images/logos/vbr-icon.png"
+            src="/assets/images/logos/vbr-icon.png"
             alt="Le logo de la Virtual Best Racing"
           />
         </NavLink>

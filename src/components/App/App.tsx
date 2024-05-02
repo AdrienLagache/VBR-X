@@ -7,9 +7,10 @@ import Footer from '../Footer/Footer';
 import BannerVbr from '../BannerVbr/BannerVbr';
 import Historic from '../Historic/Historic';
 import Evenements from '../Evenements/Evenements';
+import Adds from '../Adds/Adds';
 
 import './App.scss';
-import Adds from '../Adds/Adds';
+import Results from '../Results/Results';
 
 function App(): JSX.Element {
   return (
@@ -22,6 +23,7 @@ function App(): JSX.Element {
           <Route path="/" element={<Home />} />
           <Route path="/historique" element={<Historic />} />
           <Route path="/evenements" element={<Evenements />} />
+          <Route path="/evenements/:game" element={<Results />} />
           <Route path="/sponsors" element={<Adds />} />
         </Routes>
       </div>
