@@ -1,0 +1,49 @@
+@use '../../styles/variables' as v;
+
+.details {
+  &-pole {
+    position: relative;
+    overflow: hidden;
+    padding: calc(3 * v.$gap);
+    margin: v.$gap calc(2 * v.$gap);
+    height: 175px;
+    border: 1px solid v.$hashtag-color;
+    border-radius: 10px;
+
+    &__title {
+      position: absolute;
+      bottom: calc(-0.5 * v.$gap);
+      left: calc(0.5 * v.$gap);
+      text-align: center;
+      color: v.$hashtag-color;
+      font-weight: bold;
+      text-shadow: 2px 2px 2px white;
+    }
+  }
+
+  &-pole:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-ams2:before {
+    background-image: url('/assets/images/ams2-bckg.jpg');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+  }
+
+  &-iracing:before {
+    background-image: url('/assets/images/iracing-bckg.jpeg');
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+  }
+}

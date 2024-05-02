@@ -113,7 +113,6 @@ function Header(): JSX.Element {
         className={`secondary-header_nav${
           secVisible ? '--visible' : '--hidden'
         }`}
-        // className="secondary-header_nav--hidden"
         id="secondary-header"
       >
         <ul className="secondary-header_list">
@@ -139,7 +138,7 @@ function Header(): JSX.Element {
             </a>
           </li>
           <li className="secondary-header_item">
-            <a className="secondary-header_link" href="*">
+            <a className="secondary-header_link" href="/teams">
               Nos teams VBR
             </a>
           </li>

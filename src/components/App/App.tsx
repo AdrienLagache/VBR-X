@@ -12,6 +12,8 @@ import Adds from '../Adds/Adds';
 import './App.scss';
 import Results from '../Results/Results';
 import AddsDetails from '../AddsDetails/AddsDetails';
+import Teams from '../Teams/Teams';
+import TeamsDetails from '../TeamsDetails/TeamsDetails';
 
 function App(): JSX.Element {
   return (
@@ -27,6 +29,8 @@ function App(): JSX.Element {
           <Route path="/evenements/:game" element={<Results />} />
           <Route path="/sponsors" element={<Adds />} />
           <Route path="/sponsors/:add" element={<AddsDetails />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/teams/:pole" element={<TeamsDetails />} />
         </Routes>
       </div>
       <BannerAdd isUp={false} />
