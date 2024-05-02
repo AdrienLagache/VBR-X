@@ -126,10 +126,9 @@
   }
 
   .teams {
-    margin-top: v.$gap;
-
     &-subtitle {
       padding-top: v.$gap;
+      margin: 0;
     }
 
     &-list {

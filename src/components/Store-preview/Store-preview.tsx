@@ -14,7 +14,7 @@ function StorePreview(): JSX.Element {
 
     //   const newSliderImage = document.createElement('img');
 
-    //   newSliderImage.src = 'assets/images/store/' + sliderAdds.sliderImages[i];
+    //   newSliderImage.src = 'images/store/' + sliderAdds.sliderImages[i];
     //   newSliderImage.classList.add('slider__img');
     //   newSliderImage.alt = sliderAdds.sliderAlt[i];
     //   newSliderFigure.append(newSliderImage);
@@ -60,7 +60,7 @@ function StorePreview(): JSX.Element {
         <figure className="store-preview__card">
           <img
             className="store-preview__card__pic"
-            src="./assets/images/store/shop-tshirt.webp"
+            src="./images/store/shop-tshirt.webp"
             alt="le t-shirt VBR"
           />
           <figcaption className="store-preview__card__subtitle">

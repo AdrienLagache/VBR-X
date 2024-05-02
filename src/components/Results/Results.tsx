@@ -3,7 +3,7 @@ import './Results.scss';
 
 function Results(): JSX.Element {
   const params = useParams();
-  console.log(params.game);
+
   return (
     <section className="results">
       {params.game === 'wrc9' && (

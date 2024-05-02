@@ -17,12 +17,7 @@
 
     .results-description {
       font-size: v.$p-font-size;
-      // margin-top: calc(0.5 * v.$gap);
       font-weight: v.$p-font-weight;
-
-      // &:last-child {
-      //   margin-bottom: v.$gap;
-      // }
 
       span {
         color: v.$secondary-bckg;
@@ -44,9 +39,5 @@
         }
       }
     }
-
-    // .results-list {
-    //   margin-bottom: v.$gap;
-    // }
   }
 }

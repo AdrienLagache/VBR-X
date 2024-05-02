@@ -10,6 +10,13 @@ function Header(): JSX.Element {
   const [secVisible, setSecVisible] = useState(false);
   const [path, setPath] = useState(window.location.pathname);
   const pathDependancy = window.location.pathname;
+  let toPath = path;
+
+  if (path.startsWith('/evenements')) {
+    toPath = '/evenements';
+  } else if (path.startsWith('/sponsors')) {
+    toPath = '/sponsors';
+  }
 
   useEffect(() => {
     setPath(window.location.pathname);
@@ -68,7 +75,7 @@ function Header(): JSX.Element {
         <div className="main-header_div">
           <p>
             <NavLink
-              to={path.startsWith('/evenements') ? '/evenements' : path}
+              to={toPath}
               className={({ isActive }) => {
                 return isActive
                   ? 'main-header_link main-header_link--active'
@@ -79,6 +86,7 @@ function Header(): JSX.Element {
               {path === '/historique' ? 'À propos' : ''}
               {path.startsWith('/evenements') ? 'Évènements' : ''}
               {path === '/sponsors' ? 'Sponsors' : ''}
+              {path.startsWith('/sponsors') ? 'Sponsors' : ''}
             </NavLink>
           </p>
           <MediaQuery maxWidth={900}>

@@ -60,7 +60,7 @@ const sliderAdds = {
 
       const newSliderImage = document.createElement('img');
 
-      newSliderImage.src = 'assets/images/store/' + sliderAdds.sliderImages[i];
+      newSliderImage.src = '/assets/images/store/' + sliderAdds.sliderImages[i];
       newSliderImage.classList.add('slider__img');
       newSliderImage.alt = sliderAdds.sliderAlt[i];
       newSliderFigure.append(newSliderImage);
