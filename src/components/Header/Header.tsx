@@ -85,7 +85,6 @@ function Header(): JSX.Element {
               {path === '/' ? 'Accueil' : ''}
               {path === '/historique' ? 'À propos' : ''}
               {path.startsWith('/evenements') ? 'Évènements' : ''}
-              {path === '/sponsors' ? 'Sponsors' : ''}
               {path.startsWith('/sponsors') ? 'Sponsors' : ''}
             </NavLink>
           </p>

@@ -3,7 +3,6 @@ import './AddsDetails.scss';
 
 function AddsDetails(): JSX.Element {
   const params = useParams();
-  console.log(params);
 
   return (
     <section className="adds-details">
