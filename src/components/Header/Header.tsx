@@ -138,9 +138,9 @@ function Header(): JSX.Element {
             </a>
           </li>
           <li className="secondary-header_item">
-            <a className="secondary-header_link" href="/teams">
+            <NavLink className="secondary-header_link" to="/teams">
               Nos teams VBR
-            </a>
+            </NavLink>
           </li>
           <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">

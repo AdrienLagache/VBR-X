@@ -31,4 +31,5 @@ p,
 li {
   line-height: calc(1.2 * v.$gap);
   font-size: v.$p-font-size;
+  font-weight: v.$p-font-weight;
 }

@@ -50,17 +50,17 @@ const sliderAdds = {
     '30.50',
   ],
 
-  generateSliderImages: function () {
+  generateSliderImages() {
     const sliderContainer = document.querySelector('.slider');
 
-    for (let i = 0; i < sliderAdds.sliderImages.length; i++) {
+    for (let i = 0; i < sliderAdds.sliderImages.length; i += 1) {
       const newSliderFigure = document.createElement('figure');
       newSliderFigure.classList.add('store-preview__card');
-      sliderContainer ? sliderContainer.append(newSliderFigure) : '';
+      sliderContainer.append(newSliderFigure);
 
       const newSliderImage = document.createElement('img');
 
-      newSliderImage.src = '/assets/images/store/' + sliderAdds.sliderImages[i];
+      newSliderImage.src = `/assets/images/store/${sliderAdds.sliderImages[i]}`;
       newSliderImage.classList.add('slider__img');
       newSliderImage.alt = sliderAdds.sliderAlt[i];
       newSliderFigure.append(newSliderImage);
@@ -84,10 +84,10 @@ const sliderAdds = {
     // }
   },
 
-  handlerPrevious: function () {
+  handlerPrevious() {
     const pictures = document.querySelectorAll('.store-preview__card');
 
-    for (let i = 0; i < pictures.length; i++) {
+    for (let i = 0; i < pictures.length; i += 1) {
       if (
         pictures[i].classList.contains('store-preview__card--current') &&
         i > 0
@@ -110,10 +110,10 @@ const sliderAdds = {
     }
   },
 
-  handlerNext: function () {
+  handlerNext() {
     sliderAdds.pictures = document.querySelectorAll('.store-preview__card');
     const picturesArr = sliderAdds.pictures;
-    for (let i = 0; i < picturesArr.length; i++) {
+    for (let i = 0; i < picturesArr.length; i += 1) {
       if (
         picturesArr[i].classList.contains('store-preview__card--current') &&
         i < picturesArr.length - 1
@@ -134,7 +134,7 @@ const sliderAdds = {
     }
   },
 
-  init: function () {
+  init() {
     const previousButton = document.getElementsByClassName('slider__btn')[0];
     previousButton.addEventListener('click', sliderAdds.handlerPrevious);
     const nextButton = document.getElementsByClassName('slider__btn')[1];
