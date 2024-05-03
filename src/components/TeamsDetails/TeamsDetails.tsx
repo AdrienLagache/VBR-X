@@ -250,6 +250,170 @@ function TeamsDetails(): JSX.Element {
           </div>
         </div>
       )}
+
+      {params.pole === 'rallye' && (
+        <div>
+          <div
+            role="contentinfo"
+            className="details-pole details-rbr"
+            onKeyDown={() => {
+              setShowDetails(showDetails);
+            }}
+            onClick={(e) => {
+              setTeamTarget(e.currentTarget.className);
+              setShowDetails(!showDetails);
+            }}
+          >
+            <h1 className="details-pole__title">
+              Section VBR Richard Burns Rally
+            </h1>
+            <div
+              className={
+                showDetails && teamTarget.includes('details-rbr')
+                  ? 'teams teams--active'
+                  : 'teams'
+              }
+            >
+              <ul className="teams-palmares">
+                {teamsDetails.rbr.palmares.map((palm) => (
+                  <li className="team-palmares__item" key={palm}>
+                    {palm}
+                  </li>
+                ))}
+              </ul>
+              <ul className="teams-list">
+                {teamsDetails.rbr.list.map((list) => (
+                  <li className="teams-list__item" key={list.name}>
+                    <span className="name">
+                      <span className="name-vbr">VBR</span> {list.name}
+                    </span>{' '}
+                    <span className="function">{list.function}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            role="contentinfo"
+            className="details-pole details-wrc"
+            onKeyDown={() => {
+              setShowDetails(showDetails);
+            }}
+            onClick={(e) => {
+              setTeamTarget(e.currentTarget.className);
+              setShowDetails(!showDetails);
+            }}
+          >
+            <h1 className="details-pole__title">Section VBR WRC</h1>
+            <div
+              className={
+                showDetails && teamTarget.includes('details-wrc')
+                  ? 'teams teams--active'
+                  : 'teams'
+              }
+            >
+              <ul className="teams-palmares">
+                {teamsDetails.wrc.palmares.map((palm) => (
+                  <li className="team-palmares__item" key={palm}>
+                    {palm}
+                  </li>
+                ))}
+              </ul>
+              <ul className="teams-list">
+                {teamsDetails.wrc.list.map((list) => (
+                  <li className="teams-list__item" key={list.name}>
+                    <span className="name">
+                      <span className="name-vbr">VBR</span> {list.name}
+                    </span>{' '}
+                    <span className="function">{list.function}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            role="contentinfo"
+            className="details-pole details-dirt"
+            onKeyDown={() => {
+              setShowDetails(showDetails);
+            }}
+            onClick={(e) => {
+              setTeamTarget(e.currentTarget.className);
+              setShowDetails(!showDetails);
+            }}
+          >
+            <h1 className="details-pole__title">
+              Section VBR Dirt et Dirt rally
+            </h1>
+            <div
+              className={
+                showDetails && teamTarget.includes('details-dirt')
+                  ? 'teams teams--active'
+                  : 'teams'
+              }
+            >
+              <ul className="teams-palmares">
+                {teamsDetails.dirt.palmares.map((palm) => (
+                  <li className="team-palmares__item" key={palm}>
+                    {palm}
+                  </li>
+                ))}
+              </ul>
+              <ul className="teams-list">
+                {teamsDetails.dirt.list.map((list) => (
+                  <li className="teams-list__item" key={list.name}>
+                    <span className="name">
+                      <span className="name-vbr">VBR</span> {list.name}
+                    </span>{' '}
+                    <span className="function">{list.function}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div
+            role="contentinfo"
+            className="details-pole details-rx"
+            onKeyDown={() => {
+              setShowDetails(showDetails);
+            }}
+            onClick={(e) => {
+              setTeamTarget(e.currentTarget.className);
+              setShowDetails(!showDetails);
+            }}
+          >
+            <h1 className="details-pole__title">Section VBR-X Rallycross</h1>
+            <div
+              className={
+                showDetails && teamTarget.includes('details-rx')
+                  ? 'teams teams--active'
+                  : 'teams'
+              }
+            >
+              <ul className="teams-palmares">
+                {teamsDetails.rx.palmares.map((palm) => (
+                  <li className="team-palmares__item" key={palm}>
+                    {palm}
+                  </li>
+                ))}
+              </ul>
+              <ul className="teams-list">
+                {teamsDetails.rx.list.map((list) => (
+                  <li className="teams-list__item" key={list.name}>
+                    <span className="name">
+                      <span className="name-vbr">VBR</span> {list.name}
+                    </span>{' '}
+                    <span className="function">{list.function}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

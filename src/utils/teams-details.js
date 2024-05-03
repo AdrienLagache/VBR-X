@@ -25,9 +25,7 @@ const teamsDetails = {
   },
 
   acc: {
-    palmares: [
-      '1x World Cup MESF en sélection nationale VBR France (Monaco 2022)',
-    ],
+    palmares: ['1x World Cup MESF national selection VBR France (Monaco 2022)'],
     list: [
       { name: 'Merlve12', function: 'pilote / régleur' },
       { name: 'Elite59', function: 'pilote / régleur' },

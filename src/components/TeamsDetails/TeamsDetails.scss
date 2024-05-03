@@ -4,8 +4,7 @@
   &-pole {
     position: relative;
     overflow: hidden;
-    // padding: 10px;
-    margin: v.$gap calc(2 * v.$gap);
+    margin: v.$gap v.$gap;
     min-height: 150px;
     max-height: 100%;
     border: 1px solid v.$hashtag-color;
@@ -19,7 +18,7 @@
       font-size: v.$p-font-size;
       text-align: left;
       color: v.$hashtag-color;
-      text-shadow: 0.5px 0.5px 0.5px v.$secondary-bckg;
+      text-shadow: 0.5px 0.5px 0.5px black;
     }
 
     .teams {
@@ -43,8 +42,6 @@
 
           .name {
             color: v.$hashtag-color;
-            // margin-right: v.$gap;
-            // text-align: left;
 
             &-vbr {
               color: v.$secondary-bckg;
@@ -56,39 +53,11 @@
       .teams-palmares {
         margin-bottom: 10px;
         color: v.$hashtag-color;
-        text-shadow: 0.5px 0.5px 0.5px v.$secondary-bckg;
-        font-weight: bold;
+        text-shadow: 0.5px 0.5px 0.5px black;
+        font-size: 0.8em;
       }
     }
   }
-
-  // &-pole:hover {
-  //   .teams {
-  //     display: block;
-  //     backdrop-filter: blur(40px);
-  //     min-height: 150px;
-  //     padding: v.$gap;
-  //     color: v.$secondary-bckg;
-  //     text-shadow: 0.5px 0.5px 0.5px black;
-
-  //     .teams-list {
-  //       &__item {
-  //         display: flex;
-  //         justify-content: space-between;
-
-  //         .name {
-  //           color: v.$hashtag-color;
-  //           // margin-right: v.$gap;
-  //           // text-align: left;
-
-  //           &-vbr {
-  //             color: v.$secondary-bckg;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 
   &-pole:before {
     content: ' ';
@@ -144,6 +113,38 @@
     background-image: url('/assets/images/f1-bckg.jpg');
     background-size: 100%;
     background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+  }
+
+  &-rbr:before {
+    background-image: url('/assets/images/rbr-bckg.jpg');
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+  }
+
+  &-wrc:before {
+    background-image: url('/assets/images/wrc-bckg.jpg');
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+  }
+
+  &-dirt:before {
+    background-image: url('/assets/images/dirt-bckg.webp');
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+  }
+
+  &-rx:before {
+    background-image: url('/assets/images/rx-bckg.jpeg');
+    background-size: cover;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     opacity: 0.8;
   }

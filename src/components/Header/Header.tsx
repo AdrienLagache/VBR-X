@@ -16,6 +16,8 @@ function Header(): JSX.Element {
     toPath = '/evenements';
   } else if (path.startsWith('/sponsors')) {
     toPath = '/sponsors';
+  } else if (path.startsWith('/teams')) {
+    toPath = '/teams';
   }
 
   useEffect(() => {
@@ -86,6 +88,7 @@ function Header(): JSX.Element {
               {path === '/historique' ? 'À propos' : ''}
               {path.startsWith('/evenements') ? 'Évènements' : ''}
               {path.startsWith('/sponsors') ? 'Sponsors' : ''}
+              {path.startsWith('/teams') ? 'Nos teams' : ''}
             </NavLink>
           </p>
           <MediaQuery maxWidth={900}>

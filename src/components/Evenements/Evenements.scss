@@ -4,18 +4,21 @@
   .event {
     position: relative;
     overflow: hidden;
-    padding: calc(3 * v.$gap);
     margin: v.$gap calc(2 * v.$gap);
-    height: 200px;
+    height: 150px;
     border: 1px solid v.$hashtag-color;
     border-radius: 10px;
 
     &-title {
-      position: relative;
-      text-align: center;
+      margin: 0;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      text-align: left;
       color: v.$hashtag-color;
-      font-weight: bold;
-      text-shadow: 2px 2px 2px white;
+      font-size: v.$h2-font-size;
+      font-weight: v.$p-font-weight;
+      text-shadow: 1px 1px 1px black;
     }
   }
 
@@ -34,7 +37,7 @@
     background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   .wrc8:before {
@@ -42,7 +45,7 @@
     background-size: cover;
     background-position: 100% 0;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   .wrc7:before {
@@ -50,7 +53,7 @@
     background-size: cover;
     background-position: 10%;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   .f1:before {
@@ -58,6 +61,6 @@
     background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }

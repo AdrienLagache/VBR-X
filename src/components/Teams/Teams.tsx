@@ -4,16 +4,16 @@ import './Teams.scss';
 function Teams(): JSX.Element {
   return (
     <section className="teams">
-      <div className="teams-pole teams-track">
-        <Link to="/teams/circuit">
+      <Link to="/teams/circuit">
+        <div className="teams-pole teams-track">
           <h1 className="teams-pole__title">Pôle circuit</h1>
-        </Link>
-      </div>
-      <div className="teams-pole teams-rally">
-        <Link to="/teams/rallye">
-          <h1 className="teams-pole__title">Pôle rally</h1>
-        </Link>
-      </div>
+        </div>
+      </Link>
+      <Link to="/teams/rallye">
+        <div className="teams-pole teams-rally">
+          <h1 className="teams-pole__title">Pôle rallye</h1>
+        </div>
+      </Link>
     </section>
   );
 }
