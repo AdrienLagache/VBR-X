@@ -6,7 +6,7 @@
     overflow: hidden;
     padding: calc(3 * v.$gap);
     margin: v.$gap calc(2 * v.$gap);
-    border: 2px solid v.$hashtag-color;
+    border: 1px solid v.$hashtag-color;
     border-radius: 10px;
 
     &-title {

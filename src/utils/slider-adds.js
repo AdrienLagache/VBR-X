@@ -71,17 +71,8 @@ const sliderAdds = {
       newSliderFigure.append(newSliderFigcaption);
     }
 
-    // const sessionImage = sessionStorage.getItem('mySliderImage');
     const myImageArr = document.querySelectorAll('.store-preview__card');
-
-    // if (sessionImage !== null && parseInt(sessionImage) > 0) {
-    //   const index = parseInt(sessionImage);
-    //   if (index < myImageArr.length) {
-    //     myImageArr[index].classList.add('slider__img--current');
-    //   }
-    // } else {
     myImageArr[0]?.classList.add('store-preview__card--current');
-    // }
   },
 
   handlerPrevious() {
@@ -94,7 +85,6 @@ const sliderAdds = {
       ) {
         pictures[i].classList.remove('store-preview__card--current');
         pictures[i - 1].classList.add('store-preview__card--current');
-        // sessionStorage.setItem('mySliderImage', i - 1);
         break;
       } else if (
         pictures[i].classList.contains('store-preview__card--current') &&
@@ -104,31 +94,28 @@ const sliderAdds = {
         pictures[pictures.length - 1].classList.add(
           'store-preview__card--current'
         );
-        // sessionStorage.setItem('mySliderImage', 5);
         break;
       }
     }
   },
 
   handlerNext() {
-    sliderAdds.pictures = document.querySelectorAll('.store-preview__card');
-    const picturesArr = sliderAdds.pictures;
-    for (let i = 0; i < picturesArr.length; i += 1) {
+    const pictures = document.querySelectorAll('.store-preview__card');
+
+    for (let i = 0; i < pictures.length; i += 1) {
       if (
-        picturesArr[i].classList.contains('store-preview__card--current') &&
-        i < picturesArr.length - 1
+        pictures[i].classList.contains('store-preview__card--current') &&
+        i < pictures.length - 1
       ) {
-        picturesArr[i].classList.remove('store-preview__card--current');
-        picturesArr[i + 1].classList.add('store-preview__card--current');
-        // sessionStorage.setItem('mySliderImage', i + 1);
+        pictures[i].classList.remove('store-preview__card--current');
+        pictures[i + 1].classList.add('store-preview__card--current');
         break;
       } else if (
-        picturesArr[i].classList.contains('store-preview__card--current') &&
-        i === picturesArr.length - 1
+        pictures[i].classList.contains('store-preview__card--current') &&
+        i === pictures.length - 1
       ) {
-        picturesArr[i].classList.remove('store-preview__card--current');
-        picturesArr[0].classList.add('store-preview__card--current');
-        // sessionStorage.setItem('mySliderImage', 0);
+        pictures[i].classList.remove('store-preview__card--current');
+        pictures[0].classList.add('store-preview__card--current');
         break;
       }
     }
