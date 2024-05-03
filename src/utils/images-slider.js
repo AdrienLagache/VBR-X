@@ -79,6 +79,39 @@ const imagesSlider = {
     ],
   },
 
+  equipements: {
+    classNameSuffix: 'equipements',
+    sliderImages: [
+      'eq1.webp',
+      'eq2.webp',
+      'eq3.webp',
+      'eq4.webp',
+      'eq5.webp',
+      'eq6.webp',
+      'eq7.gif',
+      'eq8.webp',
+      'eq9.webp',
+      'eq10.webp',
+    ],
+
+    sliderAlt: [
+      'Sac à dos de sport officiel VBR',
+      'Bonnet Officiel VBR',
+      'Casquettes officielles VBR (avec ou sans damier)',
+      'Doudoune officielle VBR',
+      'Survêtement officiel VBR',
+      'Veste officielle 2019 VBR réalisée par Fab Design. En coton et à capuche',
+      'Maillot officiel VBR (2022/2023)',
+      'Masque hygiénique officiel VBR',
+      'Polo officiel VBR',
+      'Polo officiel 2019 VBR réalisé par Fab Design',
+      'Casquette racing officiel 2019 VBR rálisée par Fab Design',
+      'Pantalon de survêtement officiel 2019 VBR réalisé par Fab Design',
+      'Maillot vintage officiel VBR',
+      'T-shirt officiel 2019 VBR réalisé par Fab Design',
+    ],
+  },
+
   async generateSliderImages(obj) {
     const sliderContainer = document.querySelector(
       `.slider--${obj.classNameSuffix}`

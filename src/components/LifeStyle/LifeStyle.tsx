@@ -9,6 +9,7 @@ function LifeStyle(): JSX.Element {
   useEffect(() => {
     imagesSlider.generateSliderImages(imagesSlider.lifeStyleVirtuelReel);
     imagesSlider.generateSliderImages(imagesSlider.champions);
+    imagesSlider.generateSliderImages(imagesSlider.equipements);
     setLoaded(true);
   }, [loaded]);
 
@@ -17,7 +18,7 @@ function LifeStyle(): JSX.Element {
       <div className="life-style">
         <h1 className="life-style__title">
           Parce que chez VBR, il n&apos;y a toujours eu qu&apos;un pas du
-          virtuel au réel
+          virtuel au réel...
         </h1>
         {/* changer ici */}
         <aside className="slider slider--life-style">
@@ -53,6 +54,7 @@ function LifeStyle(): JSX.Element {
           </div>
         </aside>
       </div>
+
       <div className="life-style">
         <h1 className="life-style__title">
           Des Guépards avec les plus grands champions mondiaux
@@ -83,6 +85,46 @@ function LifeStyle(): JSX.Element {
               }}
               onClick={() => {
                 imagesSlider.handlerNext('champions');
+              }}
+            >
+              <div className="details-links__bindweed--right" />
+              <p className="details-links__text">Suivant</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div className="life-style">
+        <h1 className="life-style__title">
+          Des accessoires VBR, des playseats VBR, des vétements VBR, des
+          rally-cars VBR... Et bien + encore !!!
+        </h1>
+        {/* changer ici */}
+        <aside className="slider slider--equipements">
+          <div className="slider-btn">
+            <div
+              className="slider-btn__item"
+              role="contentinfo"
+              aria-label="Précédent"
+              onKeyDown={(e) => {
+                return e.target;
+              }}
+              onClick={() => {
+                imagesSlider.handlerPrevious('equipements');
+              }}
+            >
+              <div className="details-links__bindweed" />
+              <p className="details-links__text">Précédent</p>
+            </div>
+            <div
+              className="slider-btn__item"
+              role="contentinfo"
+              aria-label="Suivant"
+              onKeyDown={(e) => {
+                return e.target;
+              }}
+              onClick={() => {
+                imagesSlider.handlerNext('equipements');
               }}
             >
               <div className="details-links__bindweed--right" />
