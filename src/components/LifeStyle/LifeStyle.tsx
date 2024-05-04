@@ -1,17 +1,33 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useState } from 'react';
+import Loader from '../Loader/Loader';
 import imagesSlider from '../../utils/images-slider';
+
 import './LifeStyle.scss';
 
 function LifeStyle(): JSX.Element {
+  const [loadingCount, setLoadingCount] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    imagesSlider.generateSliderImages(imagesSlider.lifeStyleVirtuelReel);
-    imagesSlider.generateSliderImages(imagesSlider.champions);
-    imagesSlider.generateSliderImages(imagesSlider.equipements);
-    setLoaded(true);
-  }, [loaded]);
+    const themeObj = [
+      imagesSlider.lifeStyleVirtuelReel,
+      imagesSlider.champions,
+      imagesSlider.equipements,
+    ];
+
+    const fetchImages = async (obj: object) => {
+      await imagesSlider.generateSliderImages(obj);
+      if (loadingCount < 2) {
+        setLoadingCount(loadingCount + 1);
+      }
+    };
+    fetchImages(themeObj[loadingCount]);
+
+    if (loadingCount === 2 && loaded === false) {
+      setLoaded(true);
+    }
+  }, [loaded, loadingCount]);
 
   return (
     <section className="vbr">
@@ -20,7 +36,6 @@ function LifeStyle(): JSX.Element {
           Parce que chez VBR, il n&apos;y a toujours eu qu&apos;un pas du
           virtuel au réel...
         </h1>
-        {/* changer ici */}
         <aside className="slider slider--life-style">
           <div className="slider-btn">
             <div
@@ -51,6 +66,7 @@ function LifeStyle(): JSX.Element {
               <div className="details-links__bindweed--right" />
               <p className="details-links__text">Suivant</p>
             </div>
+            {!loaded && <Loader />}
           </div>
         </aside>
       </div>
@@ -59,7 +75,6 @@ function LifeStyle(): JSX.Element {
         <h1 className="life-style__title">
           Des Guépards avec les plus grands champions mondiaux
         </h1>
-        {/* changer ici */}
         <aside className="slider slider--champions">
           <div className="slider-btn">
             <div
@@ -90,6 +105,7 @@ function LifeStyle(): JSX.Element {
               <div className="details-links__bindweed--right" />
               <p className="details-links__text">Suivant</p>
             </div>
+            {!loaded && <Loader />}
           </div>
         </aside>
       </div>
@@ -99,7 +115,6 @@ function LifeStyle(): JSX.Element {
           Des accessoires VBR, des playseats VBR, des vétements VBR, des
           rally-cars VBR... Et bien + encore !!!
         </h1>
-        {/* changer ici */}
         <aside className="slider slider--equipements">
           <div className="slider-btn">
             <div
@@ -130,6 +145,7 @@ function LifeStyle(): JSX.Element {
               <div className="details-links__bindweed--right" />
               <p className="details-links__text">Suivant</p>
             </div>
+            {!loaded && <Loader />}
           </div>
         </aside>
       </div>
