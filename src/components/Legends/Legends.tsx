@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useScrollTo from '../useScrollTo/useScrollTo';
 import legendsDetails from '../../utils/legends-details';
 
@@ -25,7 +25,6 @@ function Legends(): JSX.Element {
           setShowDetails(!showDetails);
         }}
       >
-        {/* <h1 className="legends-pole__title">Section VBR Automobilista 2</h1> */}
         <div
           className={
             showDetails && teamTarget.includes('legends-hit')
@@ -65,7 +64,6 @@ function Legends(): JSX.Element {
           setShowDetails(!showDetails);
         }}
       >
-        {/* <h1 className="legends-pole__title">Section VBR Automobilista 2</h1> */}
         <div
           className={
             showDetails && teamTarget.includes('legends-haze')
@@ -85,6 +83,279 @@ function Legends(): JSX.Element {
           </ul>
           <ul className="teams-palmares">
             {legendsDetails.haze.palmares.map((palm) => (
+              <li className="teams-palmares__item" key={palm}>
+                {palm}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        role="contentinfo"
+        className="legends-pole legends-hujda"
+        onKeyDown={() => {
+          setShowDetails(showDetails);
+        }}
+        onClick={(e) => {
+          setTeamTarget(e.currentTarget.className);
+
+          setShowDetails(!showDetails);
+        }}
+      >
+        <div
+          className={
+            showDetails && teamTarget.includes('legends-hujda')
+              ? 'teams teams--active'
+              : 'teams'
+          }
+        >
+          <ul className="teams-list">
+            {legendsDetails.hujda.pseudo.map((pseudo) => (
+              <li className="teams-list__item" key={pseudo.name}>
+                <span className="name">
+                  <span className="name-vbr">VBR</span> {pseudo.name}
+                </span>{' '}
+                <span className="function">{pseudo.team}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="teams-palmares">
+            {legendsDetails.hujda.palmares.map((palm) => (
+              <li className="teams-palmares__item" key={palm}>
+                {palm}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        role="contentinfo"
+        className="legends-pole legends-siiwu"
+        onKeyDown={() => {
+          setShowDetails(showDetails);
+        }}
+        onClick={(e) => {
+          setTeamTarget(e.currentTarget.className);
+
+          setShowDetails(!showDetails);
+        }}
+      >
+        <div
+          className={
+            showDetails && teamTarget.includes('legends-siiwu')
+              ? 'teams teams--active'
+              : 'teams'
+          }
+        >
+          <ul className="teams-list">
+            {legendsDetails.siiwu.pseudo.map((pseudo) => (
+              <li className="teams-list__item" key={pseudo.name}>
+                <span className="name">
+                  <span className="name-vbr">VBR</span> {pseudo.name}
+                </span>{' '}
+                <span className="function">{pseudo.team}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="teams-palmares">
+            {legendsDetails.siiwu.palmares.map((palm) => (
+              <li className="teams-palmares__item" key={palm}>
+                {palm}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        role="contentinfo"
+        className="legends-pole legends-dieguin"
+        onKeyDown={() => {
+          setShowDetails(showDetails);
+        }}
+        onClick={(e) => {
+          setTeamTarget(e.currentTarget.className);
+
+          setShowDetails(!showDetails);
+        }}
+      >
+        <div
+          className={
+            showDetails && teamTarget.includes('legends-dieguin')
+              ? 'teams teams--active'
+              : 'teams'
+          }
+        >
+          <ul className="teams-list">
+            {legendsDetails.dieguin.pseudo.map((pseudo) => (
+              <li className="teams-list__item" key={pseudo.name}>
+                <span className="name">
+                  <span className="name-vbr">VBR</span> {pseudo.name}
+                </span>{' '}
+                <span className="function">{pseudo.team}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="teams-palmares">
+            {legendsDetails.dieguin.palmares.map((palm) => (
+              <li className="teams-palmares__item" key={palm}>
+                {palm}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        role="contentinfo"
+        className="legends-pole legends-marvin"
+        onKeyDown={() => {
+          setShowDetails(showDetails);
+        }}
+        onClick={(e) => {
+          setTeamTarget(e.currentTarget.className);
+
+          setShowDetails(!showDetails);
+        }}
+      >
+        <div
+          className={
+            showDetails && teamTarget.includes('legends-marvin')
+              ? 'teams teams--active'
+              : 'teams'
+          }
+        >
+          <ul className="teams-list">
+            {legendsDetails.marvin.pseudo.map((pseudo) => (
+              <li className="teams-list__item" key={pseudo.name}>
+                <span className="name">
+                  <span className="name-vbr">VBR</span> {pseudo.name}
+                </span>{' '}
+                <span className="function">{pseudo.team}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="teams-palmares">
+            {legendsDetails.marvin.palmares.map((palm) => (
+              <li className="teams-palmares__item" key={palm}>
+                {palm}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        role="contentinfo"
+        className="legends-pole legends-tristan"
+        onKeyDown={() => {
+          setShowDetails(showDetails);
+        }}
+        onClick={(e) => {
+          setTeamTarget(e.currentTarget.className);
+
+          setShowDetails(!showDetails);
+        }}
+      >
+        <div
+          className={
+            showDetails && teamTarget.includes('legends-tristan')
+              ? 'teams teams--active'
+              : 'teams'
+          }
+        >
+          <ul className="teams-list">
+            {legendsDetails.tristan.pseudo.map((pseudo) => (
+              <li className="teams-list__item" key={pseudo.name}>
+                <span className="name">
+                  <span className="name-vbr">VBR</span> {pseudo.name}
+                </span>{' '}
+                <span className="function">{pseudo.team}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="teams-palmares">
+            {legendsDetails.tristan.palmares.map((palm) => (
+              <li className="teams-palmares__item" key={palm}>
+                {palm}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        role="contentinfo"
+        className="legends-pole legends-reipz"
+        onKeyDown={() => {
+          setShowDetails(showDetails);
+        }}
+        onClick={(e) => {
+          setTeamTarget(e.currentTarget.className);
+
+          setShowDetails(!showDetails);
+        }}
+      >
+        <div
+          className={
+            showDetails && teamTarget.includes('legends-reipz')
+              ? 'teams teams--active'
+              : 'teams'
+          }
+        >
+          <ul className="teams-list">
+            {legendsDetails.reipz.pseudo.map((pseudo) => (
+              <li className="teams-list__item" key={pseudo.name}>
+                <span className="name">
+                  <span className="name-vbr">VBR</span> {pseudo.name}
+                </span>{' '}
+                <span className="function">{pseudo.team}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="teams-palmares">
+            {legendsDetails.reipz.palmares.map((palm) => (
+              <li className="teams-palmares__item" key={palm}>
+                {palm}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div
+        role="contentinfo"
+        className="legends-pole legends-autumn"
+        onKeyDown={() => {
+          setShowDetails(showDetails);
+        }}
+        onClick={(e) => {
+          setTeamTarget(e.currentTarget.className);
+
+          setShowDetails(!showDetails);
+        }}
+      >
+        <div
+          className={
+            showDetails && teamTarget.includes('legends-autumn')
+              ? 'teams teams--active'
+              : 'teams'
+          }
+        >
+          <ul className="teams-list">
+            {legendsDetails.autumn.pseudo.map((pseudo) => (
+              <li className="teams-list__item" key={pseudo.name}>
+                <span className="name">
+                  <span className="name-vbr">Mr</span> {pseudo.name}
+                </span>{' '}
+                <span className="function">{pseudo.team}</span>
+              </li>
+            ))}
+          </ul>
+          <ul className="teams-palmares">
+            {legendsDetails.autumn.palmares.map((palm) => (
               <li className="teams-palmares__item" key={palm}>
                 {palm}
               </li>

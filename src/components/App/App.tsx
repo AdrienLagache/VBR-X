@@ -16,6 +16,7 @@ import Teams from '../Teams/Teams';
 import TeamsDetails from '../TeamsDetails/TeamsDetails';
 import LifeStyle from '../LifeStyle/LifeStyle';
 import Legends from '../Legends/Legends';
+import Rossel from '../Rossel/Rossel';
 
 function App(): JSX.Element {
   return (
@@ -35,6 +36,7 @@ function App(): JSX.Element {
           <Route path="/teams/:pole" element={<TeamsDetails />} />
           <Route path="/life-style" element={<LifeStyle />} />
           <Route path="/legends" element={<Legends />} />
+          <Route path="/yohan-rossel" element={<Rossel />} />
         </Routes>
       </div>
       <BannerAdd isUp={false} />
