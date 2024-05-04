@@ -15,6 +15,7 @@ import AddsDetails from '../AddsDetails/AddsDetails';
 import Teams from '../Teams/Teams';
 import TeamsDetails from '../TeamsDetails/TeamsDetails';
 import LifeStyle from '../LifeStyle/LifeStyle';
+import useScrollTo from '../useScrollTo/useScrollTo';
 
 function App(): JSX.Element {
   // useEffect(() => {

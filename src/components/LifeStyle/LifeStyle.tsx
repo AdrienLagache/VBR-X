@@ -2,12 +2,15 @@
 import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader';
 import imagesSlider from '../../utils/images-slider';
+import useScrollTo from '../useScrollTo/useScrollTo';
 
 import './LifeStyle.scss';
 
 function LifeStyle(): JSX.Element {
   const [loadingCount, setLoadingCount] = useState(0);
   const [loaded, setLoaded] = useState(false);
+
+  useScrollTo(0, 0);
 
   useEffect(() => {
     const themeObj = [

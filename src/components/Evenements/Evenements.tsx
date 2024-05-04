@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import useScrollTo from '../useScrollTo/useScrollTo';
 
 import './Evenements.scss';
 
 function Evenements(): JSX.Element {
+  useScrollTo(0, 0);
   return (
     <section className="evenements">
       <Link to="/evenements/wrc9">

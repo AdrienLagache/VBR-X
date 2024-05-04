@@ -1,8 +1,12 @@
 import { Link, useParams } from 'react-router-dom';
+import useScrollTo from '../useScrollTo/useScrollTo';
+
 import './AddsDetails.scss';
 
 function AddsDetails(): JSX.Element {
   const params = useParams();
+
+  useScrollTo(0, 0);
 
   return (
     <section className="adds-details">

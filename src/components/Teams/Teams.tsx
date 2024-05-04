@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
+import useScrollTo from '../useScrollTo/useScrollTo';
+
 import './Teams.scss';
 
 function Teams(): JSX.Element {
+  useScrollTo(0, 0);
+
   return (
     <section className="teams">
       <Link to="/teams/circuit">

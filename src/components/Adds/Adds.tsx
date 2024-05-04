@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import useScrollTo from '../useScrollTo/useScrollTo';
 import './Adds.scss';
 
 function Adds(): JSX.Element {
+  useScrollTo(0, 0);
   return (
     <section className="adds">
       <Link to="/sponsors/gt2i">

@@ -1,8 +1,11 @@
 import { useParams } from 'react-router-dom';
+import useScrollTo from '../useScrollTo/useScrollTo';
 import './Results.scss';
 
 function Results(): JSX.Element {
   const params = useParams();
+
+  useScrollTo(0, 0);
 
   return (
     <section className="results">

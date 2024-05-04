@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom';
 import StorePreview from '../Store-preview/Store-preview';
 
 import './Home.scss';
+import useScrollTo from '../useScrollTo/useScrollTo';
 
 function Home(): JSX.Element {
+  useScrollTo(0, 0);
   return (
     <main className="home">
       <section className="presentation">

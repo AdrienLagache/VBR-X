@@ -1,4 +1,59 @@
 const imagesSlider = {
+  products: {
+    classNameSuffix: 'products',
+    isFigcaption: true,
+    sliderImages: [
+      'shop-backpack.webp',
+      'shop-bonnet.webp',
+      'shop-cap.webp',
+      'shop-doudoune.webp',
+      'shop-full_tracksuit.webp',
+      'shop-jacket.webp',
+      'shop-jersey.webp',
+      'shop-mask.webp',
+      'shop-polo.webp',
+      'shop-polo2019.webp',
+      'shop-racing_cap.webp',
+      'shop-tracksuit_pant.webp',
+      'shop-tshirt.webp',
+      'shop-tshirt2019.webp',
+    ],
+
+    sliderAlt: [
+      'Sac à dos de sport officiel VBR',
+      'Bonnet Officiel VBR',
+      'Casquettes officielles VBR (avec ou sans damier)',
+      'Doudoune officielle VBR',
+      'Survêtement officiel VBR',
+      'Veste officielle 2019 VBR réalisée par Fab Design. En coton et à capuche',
+      'Maillot officiel VBR (2022/2023)',
+      'Masque hygiénique officiel VBR',
+      'Polo officiel VBR',
+      'Polo officiel 2019 VBR réalisé par Fab Design',
+      'Casquette racing officiel 2019 VBR rálisée par Fab Design',
+      'Pantalon de survêtement officiel 2019 VBR réalisé par Fab Design',
+      'Maillot vintage officiel VBR',
+      'T-shirt officiel 2019 VBR réalisé par Fab Design',
+    ],
+
+    sliderPrices: [
+      '35.00',
+      '27.00',
+      '20.00',
+      '65.00',
+      '0.00',
+      '30.50',
+      '45.00',
+      '15.00',
+      '39.00',
+      '39.00',
+      '20.00',
+      '42.50',
+      '39.00',
+      '30.50',
+    ],
+  },
+
   lifeStyleVirtuelReel: {
     classNameSuffix: 'life-style',
     sliderImages: [
@@ -119,7 +174,7 @@ const imagesSlider = {
     const promises = [];
 
     for (let i = 0; i < obj.sliderImages.length; i += 1) {
-      const newSliderFigure = document.createElement('div');
+      const newSliderFigure = document.createElement('figure');
 
       newSliderFigure.classList.add(`slider__card--${obj.classNameSuffix}`);
       newSliderFigure.classList.add(`slider__card`);
@@ -131,6 +186,13 @@ const imagesSlider = {
       newSliderImage.classList.add('slider__img');
       newSliderImage.alt = obj.sliderAlt[i];
       newSliderFigure.append(newSliderImage);
+
+      if (obj.isFigcaption) {
+        const newSliderFigcaption = document.createElement('figcaption');
+        newSliderFigcaption.classList.add('store-preview__card__subtitle');
+        newSliderFigcaption.innerHTML = `${obj.sliderAlt[i]}<br/><strong>${obj.sliderPrices[i]}€</strong>`;
+        newSliderFigure.append(newSliderFigcaption);
+      }
 
       // Push each Promise into the array
       const promise = new Promise((resolve) => {

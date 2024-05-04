@@ -1,13 +1,17 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useParams } from 'react-router-dom';
-import './TeamsDetails.scss';
 import { useState } from 'react';
 import teamsDetails from '../../utils/teams-details';
+import useScrollTo from '../useScrollTo/useScrollTo';
+
+import './TeamsDetails.scss';
 
 function TeamsDetails(): JSX.Element {
   const [showDetails, setShowDetails] = useState(false);
   const [teamTarget, setTeamTarget] = useState('no target');
   const params = useParams();
+
+  useScrollTo(0, 0);
 
   return (
     <section className="details">
