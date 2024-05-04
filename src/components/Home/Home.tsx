@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import StorePreview from '../Store-preview/Store-preview';
 
@@ -39,10 +40,15 @@ function Home(): JSX.Element {
         <div className="read-more">
           <div className="read-more_bindweed" />
           <NavLink to="/historique" className="read-more_text">
-            En savoir plus &gt;
+            En savoir plus
           </NavLink>
         </div>
       </section>
+      <div className="networks-bindweed">
+        <div className="networks-bindweed__line" />
+        <p className="networks-bindweed__text">Nos réseaux</p>
+        <div className="networks-bindweed__line" />
+      </div>
       <ul className="networks">
         <li className="networks-item">
           <a
@@ -191,14 +197,6 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
-                src="/assets/images/logos/ams2.png"
-                alt="le logo de Automobilista 2"
-              />
-            </li>
-            <li className="teams-list__item">
-              {' '}
-              <img
-                className="teams-list__item__pic"
                 src="/assets/images/logos/iracing.png"
                 alt="le logo de iracing"
               />
@@ -238,7 +236,7 @@ function Home(): JSX.Element {
           </ul>
         </div>
         <div className="teams-rally">
-          <h2 className="teams-subtitle">Pôle rally</h2>
+          <h2 className="teams-subtitle">Pôle rallye</h2>
           <ul className="teams-list">
             <li className="teams-list__item">
               {' '}
@@ -268,10 +266,18 @@ function Home(): JSX.Element {
               {' '}
               <img
                 className="teams-list__item__pic"
+                src="/assets/images/logos/ams2.png"
+                alt="le logo de Automobilista 2"
+              />
+            </li>
+            {/* <li className="teams-list__item">
+              {' '}
+              <img
+                className="teams-list__item__pic"
                 src="/assets/images/logos/rx.jpg"
                 alt="le logo du championnat WRX"
               />
-            </li>
+            </li> */}
           </ul>
         </div>
       </section>

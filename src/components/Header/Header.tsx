@@ -89,7 +89,7 @@ function Header(): JSX.Element {
               {path.startsWith('/evenements') ? 'Évènements' : ''}
               {path.startsWith('/sponsors') ? 'Sponsors' : ''}
               {path.startsWith('/teams') ? 'Nos teams' : ''}
-              {path === '/life-style' ? 'Life Style' : ''}
+              {path === '/life-style' ? 'Lifestyle' : ''}
             </NavLink>
           </p>
           <MediaQuery maxWidth={900}>

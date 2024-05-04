@@ -9,9 +9,11 @@
   background-image: url(v.$header-bckg);
   background-size: cover;
   list-style: none;
-  z-index: 3;
+  z-index: 2;
 
   .main-header {
+    position: relative;
+
     .header-logo {
       display: inline;
       width: 80px;
@@ -58,17 +60,23 @@
 
   .secondary-header_nav--visible {
     position: absolute;
-    top: 80px;
+    top: 100%;
+    left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(50px);
+    font-weight: bold;
     color: white;
+    text-shadow: 0.5px 0.5px 0.5px black;
     font-size: v.$h2-font-size;
+    transition-property: left;
+    transition-duration: 0.8s;
 
     .secondary-header_list {
       padding: v.$gap;
 
       .secondary-header_item {
-        margin-bottom: calc(0.5 * v.$gap);
+        margin-bottom: calc(1.5 * v.$gap);
         border-bottom: 1px solid rgba(190, 190, 190, 0.5);
 
         &:last-child {
@@ -83,7 +91,10 @@
   }
 
   .secondary-header_nav--hidden {
-    display: none;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    opacity: 0;
   }
 }
 

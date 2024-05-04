@@ -17,6 +17,9 @@ import TeamsDetails from '../TeamsDetails/TeamsDetails';
 import LifeStyle from '../LifeStyle/LifeStyle';
 
 function App(): JSX.Element {
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
   return (
     <div className="App">
       <Header />

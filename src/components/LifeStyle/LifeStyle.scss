@@ -29,7 +29,7 @@
 
         &__item {
           position: relative;
-          width: 100px;
+          width: 95px;
           height: 40px;
           background-color: v.$main-bckg;
           background-size: 20%;
@@ -50,7 +50,7 @@
           .details-links__bindweed--right {
             width: 6px;
             height: 40px;
-            margin-left: 94px;
+            margin-left: 90px;
             background-color: v.$hashtag-color;
             border-radius: 100px;
             border-top-left-radius: 50%;
@@ -59,22 +59,12 @@
 
           .details-links__text {
             position: absolute;
-            top: 12px;
-            left: 10px;
+            top: 11px;
+            left: 12px;
+            min-width: 70px;
+            text-align: center;
           }
         }
-
-        // .details-links__bindweed {
-        //   width: 4px;
-        //   height: 40px;
-        //   background-color: v.$hashtag-color;
-        // }
-
-        // .details-links__text {
-        //   position: absolute;
-        //   top: 12px;
-        //   left: 10px;
-        // }
       }
 
       .slider__card {

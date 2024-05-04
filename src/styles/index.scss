@@ -19,7 +19,7 @@ code {
 h1 {
   font-size: v.$h1-font-size;
   font-weight: bold;
-  margin-top: v.$gap;
+  margin: calc(1 * v.$gap) 0;
 }
 
 h2 {

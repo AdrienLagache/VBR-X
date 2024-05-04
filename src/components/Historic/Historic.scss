@@ -24,6 +24,7 @@
   &-signature {
     font-size: v.$h1-font-size;
     color: v.$hashtag-color;
+    text-shadow: 0.2px 0.2px 0.2px black;
     margin: calc(2 * v.$gap);
   }
 }
