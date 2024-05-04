@@ -1,10 +1,12 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useEffect, useState } from 'react';
 import useScrollTo from '../useScrollTo/useScrollTo';
 
-import './Store-preview.scss';
 import imagesSlider from '../../utils/images-slider';
 import Loader from '../Loader/Loader';
+
+import './Store-preview.scss';
 
 function StorePreview(): JSX.Element {
   const [loadingCount, setLoadingCount] = useState(0);
@@ -63,6 +65,19 @@ function StorePreview(): JSX.Element {
           {!loaded && <Loader />}
         </div>
       </aside>
+      <p className="store-preview__text">
+        Pour commander contactez l&apos;Association via messenger{' '}
+        <img
+          src="/assets/images/logos/facebook.png"
+          alt="le logo de facebook"
+          onClick={() => {
+            window.scrollTo({
+              top: 675,
+              behavior: 'smooth',
+            });
+          }}
+        />
+      </p>
     </section>
   );
 }

@@ -5,6 +5,7 @@
 }
 
 .banner-add {
+  left: 0;
   height: calc(5 * v.$gap);
   background-image: url(v.$banner-bckg);
   background-size: cover;
@@ -15,7 +16,6 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    // max-width: 640px;
     height: 70px;
 
     & div {

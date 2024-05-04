@@ -432,7 +432,7 @@ function AddsDetails(): JSX.Element {
 
       {params.add === 'alescevennes' && (
         <div className="details">
-          <h1 className="details-title">Infoware 31</h1>
+          <h1 className="details-title">Alès Cévennes</h1>
           <img
             className="details-image"
             src="/assets/images/logos/adds/ales-cevennes.webp"

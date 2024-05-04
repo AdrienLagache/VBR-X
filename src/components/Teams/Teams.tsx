@@ -8,6 +8,7 @@ function Teams(): JSX.Element {
 
   return (
     <section className="teams">
+      <h1 className="teams-title">Nos équipes</h1>
       <Link to="/teams/circuit">
         <div className="teams-pole teams-track">
           <h1 className="teams-pole__title">Pôle circuit</h1>

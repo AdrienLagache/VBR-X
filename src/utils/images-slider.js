@@ -41,7 +41,7 @@ const imagesSlider = {
       '27.00',
       '20.00',
       '65.00',
-      '0.00',
+      '--',
       '30.50',
       '45.00',
       '15.00',
@@ -190,7 +190,7 @@ const imagesSlider = {
       if (obj.isFigcaption) {
         const newSliderFigcaption = document.createElement('figcaption');
         newSliderFigcaption.classList.add('store-preview__card__subtitle');
-        newSliderFigcaption.innerHTML = `${obj.sliderAlt[i]}<br/><strong>${obj.sliderPrices[i]}€</strong>`;
+        newSliderFigcaption.innerHTML = `${obj.sliderAlt[i]}<br/><strong>${obj.sliderPrices[i]} €</strong>`;
         newSliderFigure.append(newSliderFigcaption);
       }
 

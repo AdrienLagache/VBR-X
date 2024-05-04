@@ -36,11 +36,13 @@ function App(): JSX.Element {
           <Route path="/teams/:pole" element={<TeamsDetails />} />
           <Route path="/life-style" element={<LifeStyle />} />
           <Route path="/legends" element={<Legends />} />
-          <Route path="/yohan-rossel" element={<Rossel />} />
+          <Route path="/yohan-rossel" element={<Rossel />} /> {/* TODO ! */}
         </Routes>
       </div>
-      <BannerAdd isUp={false} />
-      <Footer />
+      <footer>
+        <BannerAdd isUp={false} />
+      </footer>
+      {/* <Footer /> */}
     </div>
   );
 }

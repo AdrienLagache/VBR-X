@@ -1,6 +1,12 @@
 @use '../../styles/variables' as v;
 
 .teams {
+  min-height: 55vh;
+
+  .teams-title {
+    text-align: center;
+  }
+
   &-pole {
     position: relative;
     overflow: hidden;

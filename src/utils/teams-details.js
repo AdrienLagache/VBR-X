@@ -25,7 +25,9 @@ const teamsDetails = {
   },
 
   acc: {
-    palmares: ['1x World Cup MESF national selection VBR France (Monaco 2022)'],
+    palmares: [
+      '🏅 1x World Cup MESF national selection VBR France (Monaco 2022)',
+    ],
     list: [
       { name: 'Merlve12', function: 'pilote / régleur' },
       { name: 'Elite59', function: 'pilote / régleur' },
@@ -43,15 +45,15 @@ const teamsDetails = {
   },
 
   f1: {
-    palmares: ['3x World final F1 Event Series'],
+    palmares: ['🏅 3x World final F1 Event Series'],
     list: [{ name: 'Zor', function: 'pilote / régleur' }],
   },
 
   rbr: {
     palmares: [
-      'P4 France Team VBR (2021)',
-      'P6 World Team VBR (2021)',
-      'VBR Siiwu national selection Eesti',
+      '🏅 P4 France Team VBR (2021)',
+      '🏅 P6 World Team VBR (2021)',
+      '🏅 VBR Siiwu national selection Eesti',
     ],
     list: [
       { name: 'Vatanen38', function: 'pilote / régleur' },
@@ -74,10 +76,10 @@ const teamsDetails = {
 
   wrc: {
     palmares: [
-      '1x World Final (2021)',
-      '2x 3ème World Team VBR (2019 / 2020)',
-      'P4 World Team VBR (2021)',
-      'P5 World Team VBR (2022)',
+      '🏅 1x World Final (2021)',
+      '🏅 2x 3ème World Team VBR (2019 / 2020)',
+      '🏅 P4 World Team VBR (2021)',
+      '🏅 P5 World Team VBR (2022)',
     ],
     list: [
       { name: 'AutumnFuel', function: 'pilote / régleur' },
@@ -109,7 +111,10 @@ const teamsDetails = {
   },
 
   dirt: {
-    palmares: ['1x Demi Final World Series', '1x Quarter Final World Series'],
+    palmares: [
+      '🏅 1x Demi Final World Series',
+      '🏅 1x Quarter Final World Series',
+    ],
     list: [
       { name: 'Vatanen38', function: 'pilote / régleur' },
       { name: 'Hugo Lnd', function: 'pilote / régleur' },
@@ -137,7 +142,7 @@ const teamsDetails = {
   },
 
   rx: {
-    palmares: ['2x Quarter Final World Series'],
+    palmares: ['🏅 2x Quarter Final World Series'],
     list: [
       { name: 'DONOVAN', function: 'pilote / régleur' },
       { name: 'Elite59', function: 'pilote / régleur' },

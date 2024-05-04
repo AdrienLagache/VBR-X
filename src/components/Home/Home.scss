@@ -59,7 +59,7 @@
       width: 75%;
       height: 4px;
       border-bottom: 0.1px solid v.$secondary-bckg;
-      box-shadow: 0 0.2px 0.2px black;
+      // box-shadow: 0 0.2px 0.2px black;
     }
 
     &__line:first-child {
@@ -70,7 +70,7 @@
       margin: 0;
       font-size: 0.5em;
       color: v.$secondary-bckg;
-      text-shadow: 0.2px 0.2px 0.2px black;
+      // text-shadow: 0.2px 0.2px 0.2px black;
     }
   }
 
@@ -140,20 +140,20 @@
     }
   }
 
-  .teams {
-    &-subtitle {
+  .teams-preview {
+    .teams-subtitle {
       padding-top: v.$gap;
       margin: 0;
     }
 
-    &-list {
+    .teams-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
     }
 
-    &-track {
+    .teams-track {
       background-color: v.$hashtag-color;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
@@ -174,7 +174,7 @@
       }
     }
 
-    &-rally {
+    .teams-rally {
       background-color: v.$secondary-bckg;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;

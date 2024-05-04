@@ -101,10 +101,9 @@ function Header(): JSX.Element {
           <MediaQuery minWidth={900}>
             <nav className="main-header_nav">
               <ul className="main-header_list">
-                <li className="main-header_link">
-                  <NavLink to="/historique">À propos</NavLink>
-                </li>
-
+                <NavLink to="/historique">
+                  <li className="main-header_link">À propos</li>
+                </NavLink>
                 <li className="main-header_link">
                   <NavLink to="/evenements">Évènements</NavLink>
                 </li>
@@ -121,36 +120,30 @@ function Header(): JSX.Element {
         id="secondary-header"
       >
         <ul className="secondary-header_list">
-          <li className="secondary-header_item">
-            <NavLink to="/">Accueil</NavLink>
-          </li>
-
-          <li className="secondary-header_item">
-            <NavLink to="/historique">À propos</NavLink>
-          </li>
-
-          <li className="secondary-header_item">
-            <NavLink to="/evenements">Evènements</NavLink>
-          </li>
-          <li className="secondary-header_item">
-            <NavLink to="/sponsors">
+          <NavLink className="secondary-header_link" to="/">
+            <li className="secondary-header_item">Accueil</li>
+          </NavLink>{' '}
+          <NavLink className="secondary-header_link" to="/historique">
+            <li className="secondary-header_item">À propos</li>
+          </NavLink>
+          <NavLink className="secondary-header_link" to="/evenements">
+            <li className="secondary-header_item">Evènements</li>
+          </NavLink>
+          <NavLink className="secondary-header_link" to="/sponsors">
+            <li className="secondary-header_item">
               Sponsors et partenaires de l&apos;association
-            </NavLink>
-          </li>
-          <li className="secondary-header_item">
-            <NavLink to="/life-style">Lifestyle VBR</NavLink>
-          </li>
-          <li className="secondary-header_item">
-            <NavLink className="secondary-header_link" to="/teams">
-              Nos teams VBR
-            </NavLink>
-          </li>
-          <li className="secondary-header_item">
-            <NavLink className="secondary-header_link" to="/legends">
-              VBR Legends drivers
-            </NavLink>
-          </li>
-          <li className="secondary-header_item">
+            </li>
+          </NavLink>
+          <NavLink className="secondary-header_link" to="/life-style">
+            <li className="secondary-header_item">Lifestyle VBR</li>
+          </NavLink>
+          <NavLink className="secondary-header_link" to="/teams">
+            <li className="secondary-header_item">Nos teams VBR</li>
+          </NavLink>
+          <NavLink className="secondary-header_link" to="/legends">
+            <li className="secondary-header_item">VBR Legends drivers</li>
+          </NavLink>
+          {/* <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">
               Yohan Rossel / Champion du monde WRC3
             </a>
@@ -159,7 +152,7 @@ function Header(): JSX.Element {
             <a className="secondary-header_link" href="*">
               Boutique en ligne
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

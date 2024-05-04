@@ -1,7 +1,25 @@
 @use '../../styles/variables' as v;
 
 .store-preview {
-  padding: 0 10px;
+  padding: 10px 10px;
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: 0.6em;
+    text-align: left;
+    color: v.$secondary-bckg;
+
+    img {
+      position: relative;
+      top: 3px;
+      width: 12px;
+      opacity: 0.25;
+      margin-left: 0.5em;
+    }
+  }
 
   .slider {
     position: relative;
@@ -9,7 +27,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: calc(2 * v.$gap);
 
     &-btn {
       display: flex;
@@ -23,6 +40,7 @@
 
       &__item {
         position: relative;
+        top: 20px;
         width: 95px;
         height: 40px;
         background-color: v.$main-bckg;
@@ -53,7 +71,7 @@
 
         .details-links__text {
           position: absolute;
-          top: 10px;
+          top: 11px;
           left: 12px;
           min-width: 70px;
           text-align: center;
@@ -63,11 +81,22 @@
 
     .slider__card {
       position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       top: 35%;
+      height: 160px;
       opacity: 0;
       border: 1.5px solid v.$hashtag-color;
       border-radius: 5px;
       min-width: 100%;
+      padding: 10px;
+      font-size: 0.8em;
+      font-weight: bold;
+
+      strong {
+        font-weight: v.$p-font-weight;
+      }
 
       .slider__img {
         display: block;
@@ -80,8 +109,8 @@
 
       .slider__img {
         display: block;
-        margin: 10px auto;
-        max-height: 100px;
+        margin: 0 auto 10px auto;
+        max-height: 95px;
         max-width: 100%;
       }
     }

@@ -28,7 +28,7 @@ function Home(): JSX.Element {
           Rallyes WRC3 2021 & <strong>Champion de France</strong> des rallyes
           2019 , <strong>Yohan Rossel</strong> (+ de 22 000 Abonnés) .
         </p>
-        <p className="presentation-paragraph">
+        <p className="presentation-paragraph" id="fcb">
           Des partenaires et des <strong>sponsors Officiels</strong> connus et
           prestigieux.
         </p>
@@ -190,7 +190,7 @@ function Home(): JSX.Element {
           </li>
         </ul>
       </section>
-      <section className="teams">
+      <section className="teams-preview">
         <h1 className="teams-title">Equipes</h1>
         <div className="teams-track">
           <h2 className="teams-subtitle">Pôle circuit</h2>
