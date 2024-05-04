@@ -15,12 +15,9 @@ import AddsDetails from '../AddsDetails/AddsDetails';
 import Teams from '../Teams/Teams';
 import TeamsDetails from '../TeamsDetails/TeamsDetails';
 import LifeStyle from '../LifeStyle/LifeStyle';
-import useScrollTo from '../useScrollTo/useScrollTo';
+import Legends from '../Legends/Legends';
 
 function App(): JSX.Element {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // });
   return (
     <div className="App">
       <Header />
@@ -37,6 +34,7 @@ function App(): JSX.Element {
           <Route path="/teams" element={<Teams />} />
           <Route path="/teams/:pole" element={<TeamsDetails />} />
           <Route path="/life-style" element={<LifeStyle />} />
+          <Route path="/legends" element={<Legends />} />
         </Routes>
       </div>
       <BannerAdd isUp={false} />

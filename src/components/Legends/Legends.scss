@@ -1,0 +1,109 @@
+@use '../../styles/variables' as v;
+
+.legends {
+  &-pole {
+    position: relative;
+    overflow: hidden;
+    margin: v.$gap auto;
+    height: 290px;
+    width: 315px;
+    // min-height: 150px;
+    // max-height: 100%;
+    border: 1px solid v.$hashtag-color;
+    border-radius: 10px;
+
+    &__title {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      margin: 0;
+      font-size: v.$p-font-size;
+      text-align: left;
+      color: v.$hashtag-color;
+      text-shadow: 0.5px 0.5px 0.5px black;
+    }
+
+    .teams {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      backdrop-filter: none;
+      transition-property: backdrop-filter, opacity;
+      transition-duration: 0.4s;
+      // min-height: 150px;
+      width: 100%;
+      height: 100%;
+      padding: v.$gap;
+      color: v.$secondary-bckg;
+      text-shadow: 0.2px 0.2px 0.2px black;
+
+      .teams-list {
+        &__item {
+          display: flex;
+          justify-content: space-between;
+
+          .name {
+            color: v.$hashtag-color;
+            font-size: v.$h1-font-size;
+
+            &-vbr {
+              color: v.$secondary-bckg;
+            }
+          }
+
+          .function {
+            font-size: v.$h1-font-size;
+          }
+        }
+      }
+
+      .teams-palmares {
+        margin-bottom: 10px;
+
+        &__item {
+          font-size: v.$p-font-size !important;
+          color: v.$hashtag-color;
+          text-shadow: 0.5px 0.5px 0.5px black;
+          font-size: 0.8em;
+          margin-bottom: 15%;
+        }
+      }
+    }
+
+    .teams--active {
+      opacity: 1;
+      backdrop-filter: blur(40px);
+      // min-height: 150px;
+      // max-height: 100%;
+      transition-property: backdrop-filter, opacity, height;
+      transition-duration: 0.6s;
+    }
+  }
+
+  &-pole:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-hit:before {
+    background-image: url('/assets/images/legends/hit.webp');
+    background-size: 104%;
+    background-position: 0 10%;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+
+  &-haze:before {
+    background-image: url('/assets/images/legends/haze.webp');
+    background-size: 100%;
+    background-position: left 30%;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+}

@@ -90,6 +90,7 @@ function Header(): JSX.Element {
               {path.startsWith('/sponsors') ? 'Sponsors' : ''}
               {path.startsWith('/teams') ? 'Nos teams' : ''}
               {path === '/life-style' ? 'Lifestyle' : ''}
+              {path === '/legends' ? 'Legends drivers' : ''}
             </NavLink>
           </p>
           <MediaQuery maxWidth={900}>
@@ -145,9 +146,9 @@ function Header(): JSX.Element {
             </NavLink>
           </li>
           <li className="secondary-header_item">
-            <a className="secondary-header_link" href="*">
+            <NavLink className="secondary-header_link" to="/legends">
               VBR Legends drivers
-            </a>
+            </NavLink>
           </li>
           <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">
