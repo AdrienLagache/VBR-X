@@ -126,22 +126,22 @@ function Header(): JSX.Element {
           <NavLink className="secondary-header_link" to="/historique">
             <li className="secondary-header_item">À propos</li>
           </NavLink>
-          <NavLink className="secondary-header_link" to="/evenements">
-            <li className="secondary-header_item">Evènements</li>
-          </NavLink>
           <NavLink className="secondary-header_link" to="/sponsors">
             <li className="secondary-header_item">
               Sponsors et partenaires de l&apos;association
             </li>
           </NavLink>
-          <NavLink className="secondary-header_link" to="/life-style">
-            <li className="secondary-header_item">Lifestyle VBR</li>
-          </NavLink>
           <NavLink className="secondary-header_link" to="/teams">
             <li className="secondary-header_item">Nos teams VBR</li>
           </NavLink>
+          <NavLink className="secondary-header_link" to="/evenements">
+            <li className="secondary-header_item">Evènements</li>
+          </NavLink>
           <NavLink className="secondary-header_link" to="/legends">
             <li className="secondary-header_item">VBR Legends drivers</li>
+          </NavLink>
+          <NavLink className="secondary-header_link" to="/life-style">
+            <li className="secondary-header_item">Lifestyle VBR</li>
           </NavLink>
           {/* <li className="secondary-header_item">
             <a className="secondary-header_link" href="*">

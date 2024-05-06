@@ -24,7 +24,8 @@
     .teams {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      // justify-content: space-between;
+      gap: v.$gap;
       opacity: 0;
       backdrop-filter: none;
       transition-property: backdrop-filter, opacity;
@@ -56,12 +57,13 @@
       }
 
       .teams-palmares {
+        // margin: 10% 0;
         &__item {
           font-size: v.$p-font-size !important;
           color: v.$secondary-bckg;
           text-shadow: 0.5px 0.5px 0.5px black;
           font-size: 0.8em;
-          margin-bottom: 15%;
+          margin: v.$gap 0;
         }
       }
     }
@@ -78,21 +80,21 @@
   &-autumn {
     height: 414px;
 
-    .teams {
-      justify-content: flex-start;
-      &-palmares {
-        margin-top: 40%;
-      }
-    }
+    // .teams {
+    //   justify-content: flex-start;
+    //   // &-palmares {
+    //   //   // margin-top: 40%;
+    //   // }
+    // }
   }
 
-  &-autumn {
-    .teams {
-      &-palmares {
-        margin-top: 10%;
-      }
-    }
-  }
+  // &-autumn {
+  //   .teams {
+  //     &-palmares {
+  //       margin-top: 10%;
+  //     }
+  //   }
+  // }
 
   &-pole:before {
     content: ' ';

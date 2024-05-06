@@ -9,6 +9,8 @@
   height: calc(5 * v.$gap);
   background-image: url(v.$banner-bckg);
   background-size: cover;
+  background-position: 0 19%;
+  background-repeat: no-repeat;
 
   &__scrolling-band {
     display: block;
