@@ -64,3 +64,54 @@
     opacity: 0.7;
   }
 }
+
+@media (min-width: 600px) {
+  .evenements {
+    padding: 0 v.$gap;
+
+    .event {
+      height: 300px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .evenements {
+    .event {
+      height: 400px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .evenements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: v.$gap;
+
+    .event {
+      margin: 0;
+      height: 200px;
+      width: 375px;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .evenements {
+    .event {
+      width: 425px;
+      height: 250px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .evenements {
+    .event {
+      width: 475 px;
+      height: 275px;
+    }
+  }
+}

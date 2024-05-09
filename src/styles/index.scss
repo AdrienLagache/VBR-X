@@ -33,3 +33,18 @@ li {
   font-size: v.$p-font-size;
   font-weight: v.$p-font-weight;
 }
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: calc(1.2 * v.$h1-font-size);
+  }
+
+  h2 {
+    font-size: calc(1.2 * v.$h2-font-size);
+  }
+
+  p,
+  li {
+    font-size: calc(1.2 * v.$p-font-size);
+  }
+}

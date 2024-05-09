@@ -8,7 +8,9 @@ interface BannerAddProps {
 
 const BannerAdd: React.FC<BannerAddProps> = ({ isUp }) => {
   return (
-    <div className={`banner-add${isUp ? '--up banner-add' : ''}`}>
+    <div
+      className={`banner-add${isUp ? '--up banner-add' : '--down banner-add'}`}
+    >
       <div className="banner-add__scrolling-band">
         <div className="images-container">
           <img

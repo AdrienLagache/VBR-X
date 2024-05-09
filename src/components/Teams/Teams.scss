@@ -1,8 +1,7 @@
 @use '../../styles/variables' as v;
 
 .teams {
-  min-height: 55vh;
-
+  padding: 0 10px;
   .teams-title {
     text-align: center;
   }
@@ -10,8 +9,8 @@
   &-pole {
     position: relative;
     overflow: hidden;
-    margin: v.$gap v.$gap;
-    height: 150px;
+    margin: v.$gap 0;
+    min-height: 150px;
     border: 1px solid v.$hashtag-color;
     border-radius: 10px;
 
@@ -41,7 +40,7 @@
   &-track:before {
     background-image: url('/assets/images/track.jpg');
     background-size: cover;
-    background-position: 50% 100%;
+    background-position: 50% 75%;
     background-repeat: no-repeat;
     opacity: 0.75;
   }
@@ -52,5 +51,119 @@
     background-position: 50% 100%;
     background-repeat: no-repeat;
     opacity: 0.75;
+  }
+
+  &-all:before {
+    background-image: url('/assets/images/banner-vbr2.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+  }
+}
+
+@media (min-width: 600px) {
+  .teams {
+    padding: 0 calc(2 * v.$gap);
+    .teams-title {
+      text-align: left;
+    }
+
+    &-pole {
+      min-height: 220px;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: v.$gap;
+
+    &-title {
+      width: 100%;
+    }
+
+    &-link {
+      width: 100%;
+
+      .teams-pole {
+        margin: 0;
+        min-height: 280px;
+      }
+    }
+
+    &-link--track,
+    &-link--rally {
+      .teams-track,
+      .teams-rally {
+        min-height: 280px;
+        min-width: 350px;
+      }
+    }
+  }
+}
+
+@media (min-width: 850px) {
+  .teams {
+    &-link--track,
+    &-link--rally {
+      .teams-track,
+      .teams-rally {
+        min-height: 300px;
+        min-width: 375px;
+      }
+    }
+
+    &-link {
+      .teams-pole {
+        min-height: 300px;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .teams {
+    &-link--track,
+    &-link--rally {
+      .teams-track,
+      .teams-rally {
+        min-height: 320px;
+        min-width: 400px;
+      }
+    }
+
+    &-link {
+      .teams-pole {
+        min-height: 320px;
+      }
+    }
+  }
+}
+
+@media (min-width: 940px) {
+  .teams {
+    &-link--track,
+    &-link--rally {
+      .teams-track,
+      .teams-rally {
+        min-width: 420px;
+      }
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  .teams {
+    &-link--track,
+    &-link--rally {
+      .teams-track,
+      .teams-rally {
+        min-width: 450px;
+      }
+    }
   }
 }

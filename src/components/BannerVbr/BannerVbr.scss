@@ -7,13 +7,13 @@
   background-repeat: no-repeat;
 }
 
-@media (min-width: 447px) {
+@media (min-width: 430px) {
   .banner-vbr {
     min-height: 200px;
   }
 }
 
-@media (min-width: 525px) {
+@media (min-width: 510px) {
   .banner-vbr {
     min-height: 230px;
   }
@@ -40,11 +40,5 @@
 @media (min-width: 900px) {
   .banner-vbr {
     min-height: 400px;
-  }
-}
-
-@media (min-width: 1060px) {
-  .banner-vbr {
-    min-height: 460px;
   }
 }

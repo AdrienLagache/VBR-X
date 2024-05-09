@@ -79,22 +79,7 @@
   &-tristan,
   &-autumn {
     height: 414px;
-
-    // .teams {
-    //   justify-content: flex-start;
-    //   // &-palmares {
-    //   //   // margin-top: 40%;
-    //   // }
-    // }
   }
-
-  // &-autumn {
-  //   .teams {
-  //     &-palmares {
-  //       margin-top: 10%;
-  //     }
-  //   }
-  // }
 
   &-pole:before {
     content: ' ';
@@ -176,5 +161,19 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1;
+  }
+}
+
+@media (min-width: 800px) {
+  .legends {
+    // padding: 0 v.$gap;
+
+    &-pole {
+      display: inline-block;
+      margin: 0 auto;
+      margin: v.$gap;
+      width: 46%;
+      min-height: 380px;
+    }
   }
 }

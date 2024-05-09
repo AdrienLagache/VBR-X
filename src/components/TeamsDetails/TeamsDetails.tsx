@@ -16,7 +16,8 @@ function TeamsDetails(): JSX.Element {
   return (
     <section className="details">
       {params.pole === 'circuit' && (
-        <div>
+        <div className="pole-container">
+          <h1 className="pole-title">Pôle circuit</h1>
           <div
             role="contentinfo"
             className="details-pole details-ams2"
@@ -32,8 +33,8 @@ function TeamsDetails(): JSX.Element {
             <div
               className={
                 showDetails && teamTarget.includes('details-ams2')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -71,8 +72,8 @@ function TeamsDetails(): JSX.Element {
             <div
               className={
                 showDetails && teamTarget.includes('details-iracing')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -110,8 +111,8 @@ function TeamsDetails(): JSX.Element {
             <div
               className={
                 showDetails && teamTarget.includes('details-rfactor')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -151,8 +152,8 @@ function TeamsDetails(): JSX.Element {
             <div
               className={
                 showDetails && teamTarget.includes('details-acc')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -190,8 +191,8 @@ function TeamsDetails(): JSX.Element {
             <div
               className={
                 showDetails && teamTarget.includes('details-gt')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -226,11 +227,12 @@ function TeamsDetails(): JSX.Element {
             }}
           >
             <h1 className="details-pole__title">Section VBR F1 Series</h1>
+            {/* {showDetails && teamTarget.includes('details-f1') && ( */}
             <div
               className={
                 showDetails && teamTarget.includes('details-f1')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -251,12 +253,14 @@ function TeamsDetails(): JSX.Element {
                 ))}
               </ul>
             </div>
+            {/* )} */}
           </div>
         </div>
       )}
 
       {params.pole === 'rallye' && (
-        <div>
+        <div className="pole-container">
+          <h1 className="pole-title">Pôle rallye</h1>
           <div
             role="contentinfo"
             className="details-pole details-rbr"
@@ -271,11 +275,12 @@ function TeamsDetails(): JSX.Element {
             <h1 className="details-pole__title">
               Section VBR Richard Burns Rally
             </h1>
+            {/* {showDetails && teamTarget.includes('details-rbr') && ( */}
             <div
               className={
                 showDetails && teamTarget.includes('details-rbr')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -296,8 +301,10 @@ function TeamsDetails(): JSX.Element {
                 ))}
               </ul>
             </div>
+            {/* )} */}
           </div>
 
+          {/* {showDetails && teamTarget.includes('details-wrc') && ( */}
           <div
             role="contentinfo"
             className="details-pole details-wrc"
@@ -310,11 +317,12 @@ function TeamsDetails(): JSX.Element {
             }}
           >
             <h1 className="details-pole__title">Section VBR WRC</h1>
+            {/* {showDetails && teamTarget.includes('details-wrc') && ( */}
             <div
               className={
                 showDetails && teamTarget.includes('details-wrc')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -335,8 +343,11 @@ function TeamsDetails(): JSX.Element {
                 ))}
               </ul>
             </div>
+            {/* )} */}
           </div>
+          {/* )} */}
 
+          {/* {showDetails && teamTarget.includes('details-dirt') && ( */}
           <div
             role="contentinfo"
             className="details-pole details-dirt"
@@ -351,11 +362,12 @@ function TeamsDetails(): JSX.Element {
             <h1 className="details-pole__title">
               Section VBR Dirt et Dirt rally
             </h1>
+            {/* {showDetails && teamTarget.includes('details-dirt') && ( */}
             <div
               className={
                 showDetails && teamTarget.includes('details-dirt')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -376,7 +388,9 @@ function TeamsDetails(): JSX.Element {
                 ))}
               </ul>
             </div>
+            {/* )} */}
           </div>
+          {/* )} */}
 
           <div
             role="contentinfo"
@@ -390,11 +404,12 @@ function TeamsDetails(): JSX.Element {
             }}
           >
             <h1 className="details-pole__title">Section VBR-X Rallycross</h1>
+            {/* {showDetails && teamTarget.includes('details-rx') && ( */}
             <div
               className={
                 showDetails && teamTarget.includes('details-rx')
-                  ? 'teams teams--active'
-                  : 'teams'
+                  ? 'team team--active'
+                  : 'team'
               }
             >
               <ul className="teams-palmares">
@@ -415,7 +430,62 @@ function TeamsDetails(): JSX.Element {
                 ))}
               </ul>
             </div>
+            {/* )} */}
           </div>
+        </div>
+      )}
+
+      {params.pole === 'tous-les-membres' && (
+        <div>
+          <h1 className="pole-title">Tous les membres VBR</h1>
+          <div
+            role="contentinfo"
+            className="details-pole details-all"
+            onKeyDown={() => {
+              setShowDetails(showDetails);
+            }}
+            onClick={(e) => {
+              setTeamTarget(e.currentTarget.className);
+              setShowDetails(!showDetails);
+            }}
+          >
+            <h1 className="details-pole__title">Tous les membres</h1>
+            {/* {showDetails && teamTarget.includes('details-all') && ( */}
+            <div
+              className={
+                showDetails && teamTarget.includes('details-all')
+                  ? 'team team--active'
+                  : 'team'
+              }
+            >
+              <ul className="teams-palmares">
+                {teamsDetails.all.palmares.map((palm) => (
+                  <li className="team-palmares__item" key={palm}>
+                    {palm}
+                  </li>
+                ))}
+              </ul>
+              <ul className="teams-list">
+                {teamsDetails.all.list.map((list) => (
+                  <li className="teams-list__item" key={list.name}>
+                    <span className="name">
+                      <span className="name-vbr">VBR</span> {list.name}
+                    </span>{' '}
+                    <span className="function">{list.function}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* )} */}
+          </div>
+          <h2 className="details-advertising__title">Attention :</h2>
+          <p className="details-advertising__text">
+            Toute personne{' '}
+            <strong>
+              ayant un pseudonyme VBR et ne figurant pas dans cette liste
+            </strong>
+            , ne peut prétendre être membre de notre association.
+          </p>
         </div>
       )}
     </section>

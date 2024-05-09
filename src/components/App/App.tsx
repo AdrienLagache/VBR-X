@@ -39,10 +39,7 @@ function App(): JSX.Element {
           <Route path="/yohan-rossel" element={<Rossel />} /> {/* TODO ! */}
         </Routes>
       </div>
-      <footer>
-        <BannerAdd isUp={false} />
-      </footer>
-      {/* <Footer /> */}
+      <footer>{/* <BannerAdd isUp={false} /> */}</footer>
     </div>
   );
 }

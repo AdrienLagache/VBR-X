@@ -2,6 +2,9 @@
 
 .store-preview {
   padding: 10px 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
 
   &__title {
     margin-bottom: 0;
@@ -112,6 +115,22 @@
         margin: 0 auto 10px auto;
         max-height: 95px;
         max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .store-preview {
+    .slider {
+      &-btn {
+        &__item {
+          width: 115px;
+
+          .details-links__bindweed--right {
+            margin-left: 110px;
+          }
+        }
       }
     }
   }

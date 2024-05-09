@@ -19,15 +19,25 @@
       display: inline;
       width: 80px;
     }
-    .main-header_div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 75%;
-      padding-right: v.$gap;
+
+    .main-header_page {
+      color: white;
       position: absolute;
       top: 40%;
-      left: 23%;
+      left: 22%;
+
+      .main-header_link--active {
+        color: v.$hashtag-color;
+      }
+    }
+
+    .main-header_div {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: absolute;
+      top: 40%;
+      left: 80%;
 
       .main-header_link {
         color: white;
@@ -38,23 +48,16 @@
       }
 
       .main-header_separation {
+        text-align: center;
         color: white;
       }
 
-      .main-header_nav {
-        .main-header_list {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: calc(3 * v.$gap);
-          .main-header_link {
-            color: white;
-          }
-          .main-header_separation {
-            text-align: center;
-            color: white;
-          }
-        }
+      .main-header_list {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        align-items: center;
+        gap: calc(4 * v.$gap);
       }
     }
   }
@@ -117,12 +120,14 @@
 
 @media (min-width: 600px) {
   .header {
-    font-size: calc(1.4 * v.$p-font-size);
-    height: 120px;
-
     .main-header {
-      .header-logo {
-        width: 120px;
+      .main-header_page {
+        left: 15%;
+      }
+
+      .main-header_div {
+        left: 15%;
+        width: 80%;
       }
     }
   }
@@ -130,35 +135,39 @@
 
 @media (min-width: 900px) {
   .header {
-    font-size: calc(1.6 * v.$p-font-size);
-    height: 150px;
+    background-image: url(v.$header-bckg);
+    background-size: 45%;
+    background-position: 0 0;
+    font-size: calc(1.2 * v.$p-font-size);
+    height: 100px;
+    margin: 0 auto;
 
     .main-header {
-      .header-logo {
-        width: 150px;
+      .main-header_page {
+        left: 12%;
       }
-    }
-  }
 
-  .header--hidden {
-    top: calc(-7.1 * v.$gap);
-    transition: top 0.4s ease-out;
-  }
-}
+      .header-logo {
+        width: 100px;
+        height: 100px;
+      }
 
-@media (min-width: 1400px) {
-  .header {
-    .main-header {
+      .main-header_div {
+        left: 15%;
+      }
+
       .main-header_div {
         .main-header_nav {
           .main-header_list {
-            gap: calc(6 * v.$gap);
+            gap: calc(4 * v.$gap);
           }
         }
       }
     }
   }
-  // .main-header_list {
-  //   gap: calc(10 * v.$gap);
-  // }
+
+  .header--hidden {
+    top: -100px;
+    transition: top 0.4s ease-out;
+  }
 }

@@ -20,7 +20,7 @@ function Historic(): JSX.Element {
       </p>
       <ul className="historic-list">
         <li className="historic-list__item">
-          Elle est Aujourd&apos;hui spécialisée&quot; exclusivement dans la
+          Elle est Aujourd&apos;hui spécialisée &quot;exclusivement dans la
           simulation automobile&quot; sur PC, PS4 et Xbox. Nous sommes une
           équipe Française basée a Alès dans la région d&apos;Occitanie.
         </li>

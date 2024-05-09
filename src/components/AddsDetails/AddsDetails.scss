@@ -45,7 +45,7 @@
         height: 40px;
         background-color: v.$main-bckg;
         background-image: url('/assets/images/logos/website.svg');
-        background-size: 20%;
+        background-size: 17%;
         background-repeat: no-repeat;
         background-position: 95%;
 
@@ -68,7 +68,7 @@
         height: 40px;
         background-color: v.$main-bckg;
         background-image: url('/assets/images/logos/facebook.png');
-        background-size: 20%;
+        background-size: 15%;
         background-repeat: no-repeat;
         background-position: 95%;
 
@@ -89,6 +89,35 @@
         &_logo {
           display: block;
           height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .adds-details {
+    padding: calc(1 * v.$gap);
+    .details {
+      &-links {
+        margin-top: calc(3 * v.$gap);
+
+        &__item--site {
+          width: 220px;
+          height: 50px;
+
+          .details-links__bindweed {
+            height: 50px;
+          }
+        }
+
+        &__item--fcb {
+          width: 220px;
+          height: 50px;
+
+          .details-links__bindweed {
+            height: 50px;
+          }
         }
       }
     }

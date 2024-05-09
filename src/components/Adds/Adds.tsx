@@ -5,50 +5,51 @@ import './Adds.scss';
 function Adds(): JSX.Element {
   useScrollTo(0, 0);
   return (
-    <section className="adds">
-      <Link to="/sponsors/gt2i">
+    <div className="adds">
+      <h1 className="adds__title">Nos sponsors et partenaires</h1>
+      <Link className="adds__link" to="/sponsors/gt2i">
         <div className="add gt2i" />
       </Link>
-      <Link to="/sponsors/benjx">
+      <Link className="adds__link" to="/sponsors/benjx">
         <div className="add benjx" />
       </Link>
-      <Link to="/sponsors/newgo">
+      <Link className="adds__link" to="/sponsors/newgo">
         <div className="add newgo" />
       </Link>
-      <Link to="/sponsors/driverxperience">
+      <Link className="adds__link" to="/sponsors/driverxperience">
         <div className="add driverxperience" />
       </Link>
-      <Link to="/sponsors/jfr">
+      <Link className="adds__link" to="/sponsors/jfr">
         <div className="add jfr" />
       </Link>
-      <Link to="/sponsors/proracecafe">
+      <Link className="adds__link" to="/sponsors/proracecafe">
         <div className="add proracecafe" />
       </Link>
-      <Link to="/sponsors/costanzo">
+      <Link className="adds__link" to="/sponsors/costanzo">
         <div className="add costanzo" />
       </Link>
-      <Link to="/sponsors/fabdesign">
+      <Link className="adds__link" to="/sponsors/fabdesign">
         <div className="add fabdesign" />
       </Link>
-      <Link to="/sponsors/polemeca">
+      <Link className="adds__link" to="/sponsors/polemeca">
         <div className="add polemeca" />
       </Link>
-      <Link to="/sponsors/spiruline">
+      <Link className="adds__link" to="/sponsors/spiruline">
         <div className="add spiruline" />
       </Link>
-      <Link to="/sponsors/infoware">
+      <Link className="adds__link" to="/sponsors/infoware">
         <div className="add infoware" />
       </Link>
-      <Link to="/sponsors/alesagglo">
+      <Link className="adds__link" to="/sponsors/alesagglo">
         <div className="add alesagglo" />
       </Link>
-      <Link to="/sponsors/alescevennes">
+      <Link className="adds__link" to="/sponsors/alescevennes">
         <div className="add alescevennes" />
       </Link>
-      <Link to="/sponsors/cammus">
+      <Link className="adds__link" to="/sponsors/cammus">
         <div className="add cammus" />
       </Link>
-    </section>
+    </div>
   );
 }
 

@@ -1,12 +1,36 @@
 @use '../../styles/variables' as v;
 
 .details {
+  min-height: 49.1vh;
+  padding: 0 v.$gap;
+
+  .pole-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  &-advertising__title {
+    color: v.$hashtag-color;
+    text-shadow: 0.2px 0.2px 0.2px black;
+    margin-top: calc(2 * v.$gap);
+  }
+
+  &-advertising__text {
+    margin-top: v.$gap;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  &-all {
+    min-height: 300px !important;
+  }
+
   &-pole {
     position: relative;
-    overflow: hidden;
-    margin: v.$gap v.$gap;
+    margin: v.$gap 0;
     min-height: 150px;
-    max-height: 100%;
     border: 1px solid v.$hashtag-color;
     border-radius: 10px;
 
@@ -21,18 +45,20 @@
       text-shadow: 0.5px 0.5px 0.5px black;
     }
 
-    .teams {
+    .team {
       opacity: 0;
       backdrop-filter: none;
       transition-property: backdrop-filter, opacity;
       transition-duration: 0.4s;
-      min-height: 150px;
-      max-height: 150px;
+      min-height: 100%;
+      max-height: 100%;
       padding: v.$gap;
       color: v.$secondary-bckg;
       text-shadow: 0.2px 0.2px 0.2px black;
+      border-radius: 10px;
 
       .teams-list {
+        display: none;
         &__item {
           display: flex;
           justify-content: space-between;
@@ -48,6 +74,7 @@
       }
 
       .teams-palmares {
+        display: none;
         margin-bottom: 10px;
         color: v.$hashtag-color;
         text-shadow: 0.5px 0.5px 0.5px black;
@@ -59,13 +86,20 @@
       }
     }
 
-    .teams--active {
+    .team--active {
       opacity: 1;
       backdrop-filter: blur(40px);
       min-height: 150px;
-      max-height: 100%;
       transition-property: backdrop-filter, opacity, height;
       transition-duration: 0.6s;
+
+      .teams-list {
+        display: block;
+      }
+
+      .teams-palmares {
+        display: block;
+      }
     }
   }
 
@@ -77,6 +111,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
   }
 
   &-ams2:before {
@@ -97,7 +132,7 @@
 
   &-rfactor:before {
     background-image: url('/assets/images/rfactor-bckg.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;
     opacity: 0.8;
@@ -113,7 +148,7 @@
 
   &-gt:before {
     background-image: url('/assets/images/gt-bckg.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
     opacity: 0.8;
@@ -121,7 +156,7 @@
 
   &-f1:before {
     background-image: url('/assets/images/f1-bckg.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
     opacity: 0.8;
@@ -157,5 +192,112 @@
     background-position: 50% 100%;
     background-repeat: no-repeat;
     opacity: 0.8;
+  }
+
+  &-all:before {
+    background-image: url('/assets/images/all-members.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 600px) {
+  .details {
+    padding: 0 calc(2 * v.$gap);
+    .pole-container {
+      .details-pole {
+        min-height: 200px;
+
+        .team--active {
+          min-height: 200px;
+        }
+      }
+    }
+
+    .details-all {
+      min-height: 350px !important;
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .details {
+    .pole-container {
+      .details-pole {
+        min-height: 225px;
+
+        .team--active {
+          min-height: 225px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .details {
+    .pole-container {
+      .details-pole {
+        min-height: 275px;
+
+        .team--active {
+          min-height: 275px;
+        }
+      }
+    }
+
+    .details-all {
+      min-height: 400px !important;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .details {
+    .pole-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .details-pole {
+        min-height: 220px;
+        width: 400px;
+
+        .team--active {
+          min-height: 220px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .details {
+    .pole-container {
+      .details-pole {
+        min-height: 250px;
+        width: 425px;
+
+        .team--active {
+          min-height: 250px;
+        }
+      }
+    }
+
+    .details-all {
+      min-height: 500px !important;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .details {
+    .pole-container {
+      .details-pole {
+        width: 435px;
+      }
+    }
   }
 }
