@@ -1,44 +1,51 @@
 @use '../../styles/variables' as v;
 
 .banner-vbr {
-  min-height: 164px;
+  // min-height: 164px;
+  min-height: 251px;
   background-image: url(v.$banner-vbr);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-@media (min-width: 430px) {
-  .banner-vbr {
-    min-height: 200px;
-  }
-}
+// @media (min-width: 430px) {
+//   .banner-vbr {
+//     min-height: 200px;
+//   }
+// }
 
-@media (min-width: 510px) {
-  .banner-vbr {
-    min-height: 230px;
-  }
-}
+// @media (min-width: 510px) {
+//   .banner-vbr {
+//     min-height: 230px;
+//   }
+// }
 
-@media (min-width: 600px) {
-  .banner-vbr {
-    min-height: 260px;
-  }
-}
+// @media (min-width: 600px) {
+//   .banner-vbr {
+//     min-height: 260px;
+//   }
+// }
 
-@media (min-width: 680px) {
-  .banner-vbr {
-    min-height: 300px;
-  }
-}
+// @media (min-width: 680px) {
+//   .banner-vbr {
+//     min-height: 300px;
+//   }
+// }
 
-@media (min-width: 789px) {
-  .banner-vbr {
-    min-height: 340px;
-  }
-}
+// @media (min-width: 789px) {
+//   .banner-vbr {
+//     min-height: 340px;
+//   }
+// }
 
-@media (min-width: 900px) {
+// @media (min-width: 900px) {
+//   .banner-vbr {
+//     min-height: 400px;
+//   }
+// }
+
+@media (min-width: 660px) {
   .banner-vbr {
-    min-height: 400px;
+    margin: 0 auto;
   }
 }
