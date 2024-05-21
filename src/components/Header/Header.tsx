@@ -109,7 +109,7 @@ function Header(): JSX.Element {
             </ul>
           </nav>
         </MediaQuery>
-        <MediaQuery minWidth={600} maxWidth={899}>
+        <MediaQuery minWidth={600} maxWidth={999}>
           <nav className="main-header_div">
             <ul className="main-header_list">
               <NavLink
@@ -146,7 +146,7 @@ function Header(): JSX.Element {
             </ul>
           </nav>
         </MediaQuery>
-        <MediaQuery minWidth={900} maxWidth={1199}>
+        {/* <MediaQuery minWidth={900} maxWidth={1199}>
           <nav className="main-header_div">
             <ul className="main-header_list">
               <NavLink
@@ -174,7 +174,7 @@ function Header(): JSX.Element {
                   setPath('/sponsors');
                 }}
               >
-                <li>Sponsors de l&apos;association</li>
+                <li>Sponsors</li>
               </NavLink>
 
               <li className="main-header_link" id="menu">
@@ -182,8 +182,8 @@ function Header(): JSX.Element {
               </li>
             </ul>
           </nav>
-        </MediaQuery>
-        <MediaQuery minWidth={1200} maxWidth={1399}>
+        </MediaQuery> */}
+        <MediaQuery minWidth={1000} maxWidth={1200}>
           <nav className="main-header_div">
             <ul className="main-header_list">
               <NavLink
@@ -211,7 +211,7 @@ function Header(): JSX.Element {
                   setPath('/sponsors');
                 }}
               >
-                <li>Sponsors de l&apos;association</li>
+                <li>Sponsors</li>
               </NavLink>
               <NavLink
                 className={({ isActive }) => {
@@ -233,7 +233,7 @@ function Header(): JSX.Element {
             </ul>
           </nav>
         </MediaQuery>
-        <MediaQuery minWidth={1400}>
+        <MediaQuery minWidth={1200} maxWidth={1400}>
           <nav className="main-header_div">
             <ul className="main-header_list">
               <NavLink
@@ -261,7 +261,7 @@ function Header(): JSX.Element {
                   setPath('/sponsors');
                 }}
               >
-                <li>Sponsors de l&apos;association</li>
+                <li>Sponsors</li>
               </NavLink>
               <NavLink
                 className={({ isActive }) => {
@@ -292,6 +292,251 @@ function Header(): JSX.Element {
               <li className="main-header_link" id="menu">
                 plus
               </li>
+            </ul>
+          </nav>
+        </MediaQuery>
+        <MediaQuery minWidth={1400} maxWidth={1600}>
+          <nav className="main-header_div">
+            <ul className="main-header_list">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/historique"
+                onClick={() => {
+                  setPath('/historique');
+                }}
+              >
+                <li>À propos</li>
+              </NavLink>
+
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/sponsors"
+                onClick={() => {
+                  setPath('/sponsors');
+                }}
+              >
+                <li>Sponsors</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/teams"
+                onClick={() => {
+                  setPath('/teams');
+                }}
+              >
+                <li>Nos teams VBR</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/evenements"
+                onClick={() => {
+                  setPath('/evenements');
+                }}
+              >
+                <li>Évènements</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/legends"
+                onClick={() => {
+                  setPath('/legends');
+                }}
+              >
+                <li>Legends</li>
+              </NavLink>
+              <li className="main-header_link" id="menu">
+                plus
+              </li>
+            </ul>
+          </nav>
+        </MediaQuery>
+        <MediaQuery minWidth={1601} maxWidth={1800}>
+          <nav className="main-header_div">
+            <ul className="main-header_list">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/historique"
+                onClick={() => {
+                  setPath('/historique');
+                }}
+              >
+                <li>À propos</li>
+              </NavLink>
+
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/sponsors"
+                onClick={() => {
+                  setPath('/sponsors');
+                }}
+              >
+                <li>Sponsors</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/teams"
+                onClick={() => {
+                  setPath('/teams');
+                }}
+              >
+                <li>Nos teams VBR</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/evenements"
+                onClick={() => {
+                  setPath('/evenements');
+                }}
+              >
+                <li>Évènements</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/legends"
+                onClick={() => {
+                  setPath('/legends');
+                }}
+              >
+                <li>Legends</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/life-style"
+                onClick={() => {
+                  setPath('/life-style');
+                }}
+              >
+                <li>Lifestyle</li>
+              </NavLink>
+            </ul>
+          </nav>
+        </MediaQuery>
+        <MediaQuery minWidth={1801}>
+          <nav className="main-header_div">
+            <ul className="main-header_list">
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/historique"
+                onClick={() => {
+                  setPath('/historique');
+                }}
+              >
+                <li>À propos</li>
+              </NavLink>
+
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/sponsors"
+                onClick={() => {
+                  setPath('/sponsors');
+                }}
+              >
+                <li>Sponsors de l'association</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/teams"
+                onClick={() => {
+                  setPath('/teams');
+                }}
+              >
+                <li>Nos teams VBR</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/evenements"
+                onClick={() => {
+                  setPath('/evenements');
+                }}
+              >
+                <li>Évènements</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/legends"
+                onClick={() => {
+                  setPath('/legends');
+                }}
+              >
+                <li>VBR Legends</li>
+              </NavLink>
+              <NavLink
+                className={({ isActive }) => {
+                  return isActive
+                    ? 'main-header_link--active'
+                    : 'main-header_link';
+                }}
+                to="/life-style"
+                onClick={() => {
+                  setPath('/life-style');
+                }}
+              >
+                <li>Lifestyle</li>
+              </NavLink>
             </ul>
           </nav>
         </MediaQuery>

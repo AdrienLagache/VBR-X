@@ -37,7 +37,7 @@
       display: inline-block;
       max-height: 40px;
       max-width: 200px;
-      margin-right: calc(2 * v.$gap);
+      margin-right: calc(4 * v.$gap);
       vertical-align: middle;
     }
 
@@ -51,13 +51,17 @@
     }
 
     & div {
-      animation: defilement 20s infinite linear;
+      animation: defilement 50s infinite linear;
     }
   }
 }
 
 @media (min-width: 900px) {
   .banner-add--up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     margin-top: 100px;
   }
 }
