@@ -48,6 +48,12 @@
     }
   }
 
+  // @media (min-width: 900px) {
+  //   .presentation {
+  //     width: 80%;
+  //   }
+  // }
+
   .networks-bindweed {
     position: relative;
     margin-top: calc(2 * v.$gap);
@@ -132,6 +138,12 @@
       }
     }
   }
+
+  // @media (min-width: 900px) {
+  //   .awards {
+  //     width: 80%;
+  //   }
+  // }
 
   .teams-preview {
     .teams-subtitle {
@@ -235,10 +247,32 @@
 
 @media (min-width: 900px) {
   .home {
+    width: 80%;
+    margin: 0 auto;
     .teams-preview {
       .teams-subtitle {
         padding: 15px 0 10px 0;
         margin: 0;
+      }
+
+      .teams-track {
+        .teams-list {
+          &__item {
+            &__pic {
+              max-height: 50px;
+            }
+          }
+        }
+      }
+
+      .teams-rally {
+        .teams-list {
+          &__item {
+            &__pic {
+              max-height: 50px;
+            }
+          }
+        }
       }
     }
   }

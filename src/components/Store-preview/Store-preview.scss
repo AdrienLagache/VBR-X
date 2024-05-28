@@ -2,8 +2,10 @@
 
 .store-preview {
   padding: 10px 10px;
-  max-width: 500px;
+  // max-width: 500px;
+  width: 66%;
   margin: 0 auto;
+  padding-bottom: calc(2 * v.$gap);
   text-align: center;
 
   &__title {
@@ -122,6 +124,7 @@
 
 @media (min-width: 900px) {
   .store-preview {
+    // height: 200px;
     .slider {
       &-btn {
         &__item {

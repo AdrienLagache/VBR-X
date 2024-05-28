@@ -19,6 +19,7 @@
 .banner-add {
   left: 0;
   height: calc(5 * v.$gap);
+  width: 100%;
 
   &__scrolling-band {
     display: block;
@@ -29,7 +30,7 @@
     height: 70px;
 
     & div {
-      position: absolute;
+      // position: absolute;
       white-space: nowrap;
     }
 
@@ -58,10 +59,10 @@
 
 @media (min-width: 900px) {
   .banner-add--up {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
     margin-top: 100px;
   }
 }
